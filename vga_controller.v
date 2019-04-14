@@ -5,7 +5,7 @@ module vga_controller(iRST_n,
                       oVS,
                       b_data,
                       g_data,
-                      r_data,up,down,left,right);
+                      r_data,up,down,left,right, dividedclock);
 
 	
 input iRST_n;
@@ -16,7 +16,12 @@ output reg oHS;
 output reg oVS;
 output [7:0] b_data;
 output [7:0] g_data;  
-output [7:0] r_data;                        
+output [7:0] r_data;
+
+input dividedclock;
+
+integer counter;
+                        
 ///////// ////                     
 reg [18:0] ADDR;
 reg [23:0] bgr_data;
@@ -36,9 +41,9 @@ video_sync_generator LTM_ins (.vga_clk(iVGA_CLK),
 always@(posedge iVGA_CLK,negedge iRST_n)
 begin
   if (!iRST_n)
-     ADDR<=19'd0;
+     ADDR<=19'd100000;
   else if (cHS==1'b0 && cVS==1'b0)
-     ADDR<=19'd0;
+     ADDR<=19'd100000;
   else if (cBLANK_n==1'b1)
      ADDR<=ADDR+1;
 end
@@ -70,32 +75,82 @@ initial begin
 	x_square = 10'd100;
 	y_square = 10'd100;
 	count = 20'd0;
+	
+	counter = 0;
 end
 
-always@(posedge iVGA_CLK)
+always@(posedge dividedclock)
 begin
-	if (count < 20'd1000000) begin
-		count = count + 20'd1;
-	end 
-	else if (count == 20'd1000000) begin
-		count = 20'd0;
-		if (~up) begin
-			y_square = y_square - 10'd1;
-		end else if (~down) begin
-			y_square = y_square + 10'd1;
-		end else if (~left) begin
-			x_square = x_square - 10'd1;
-		end else if (~right) begin
-			x_square = x_square + 10'd1;
+		if (ADDR % 2 ==0) begin
+			index2 = 8'd0;
 		end
-	end
-	
-	if (addressX <= x_square + 10'd99 & addressX >= x_square & addressY <= y_square+10'd99 & addressY >= y_square) begin
-		index2 = 8'd2;
-	end
-	else begin
-		index2 = index[7:0];
-	end
+		
+		if (ADDR % 2 ==0) begin
+			index2 = 8'd1;
+		end
+
+		if (counter == 0) begin
+		
+		end
+		
+		
+		if (counter == 1) begin
+		
+		end
+		
+		
+		if (counter == 2) begin
+			
+		end
+		
+		
+		if (counter == 3) begin
+			
+		end
+		
+		
+		// reset the counter
+		if (counter == 4) begin
+			counter = 0;
+		end
+		
+		
+		counter = counter + 1;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+//
+//	if (count < 20'd1000000) begin
+//		count = count + 20'd1;
+//	end 
+//	else if (count == 20'd1000000) begin
+//		count = 20'd0;
+//		if (~up) begin
+//			y_square = y_square - 10'd1;
+//		end else if (~down) begin
+//			y_square = y_square + 10'd1;
+//		end else if (~left) begin
+//			x_square = x_square - 10'd1;
+//		end else if (~right) begin
+//			x_square = x_square + 10'd1;
+//		end
+//	end
+//	
+//	if (addressX <= x_square + 10'd99 & addressX >= x_square & addressY <= y_square+10'd99 & addressY >= y_square) begin
+//		index2 = 8'd2;
+//	end
+//	else begin
+//		index2 = index[7:0];
+//	end
 	
 end
 /*

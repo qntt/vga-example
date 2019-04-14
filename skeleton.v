@@ -82,14 +82,18 @@ module skeleton(resetn,
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
 	VGA_Audio_PLL 		p1	(.areset(~DLY_RST),.inclk0(CLOCK_50),.c0(VGA_CTRL_CLK),.c1(AUD_CTRL_CLK),.c2(VGA_CLK)	);
+	
+	wire vga_clock5;
+	pll div2 (VGA_CLK,vga_clock5);
+	
 	vga_controller vga_ins(.iRST_n(DLY_RST),
-								 .iVGA_CLK(VGA_CLK),
+								 .iVGA_CLK(vga_clock5),
 								 .oBLANK_n(VGA_BLANK),
 								 .oHS(VGA_HS),
 								 .oVS(VGA_VS),
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
-								 .r_data(VGA_R),.up(up),.down(down),.left(left),.right(right));
+								 .r_data(VGA_R),.up(up),.down(down),.left(left),.right(right), .dividedclock(VGA_CLK));
 	
 	
 endmodule
