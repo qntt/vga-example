@@ -5,18 +5,39 @@ module vga_controller(iRST_n,
                       oVS,
                       b_data,
                       g_data,
-                      r_data,up,down,left,right);
+                      r_data, up, down, left, right,
+							 snake_data);
+							 //board, 
+							 //snake1, snake2, 
+							 //head1, head2,
+							 //length1, length2,
+							 //score1, score2,
+							 //stage, 
+							 //isDrawing);
 
 	
 input iRST_n;
 input iVGA_CLK;
-input up,down,left,right;
+input up, down, left, right;
 output reg oBLANK_n;
 output reg oHS;
 output reg oVS;
 output [7:0] b_data;
 output [7:0] g_data;  
-output [7:0] r_data;                        
+output [7:0] r_data;     
+
+input [423 : 0] snake_data;
+
+integer counter;
+
+
+
+//input [1600:0] board;
+//input [200:0] snake1, snake2;
+//input [31:0] head1, head2;
+//input [31:0] length1, length2;
+//input [31:0] score1, score2;
+                   
 ///////// ////                     
 reg [18:0] ADDR;
 reg [23:0] bgr_data;
@@ -25,6 +46,8 @@ wire [7:0] index;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
 ////
+
+
 assign rst = ~iRST_n;
 video_sync_generator LTM_ins (.vga_clk(iVGA_CLK),
                               .reset(rst),
@@ -39,8 +62,9 @@ begin
      ADDR<=19'd0;
   else if (cHS==1'b0 && cVS==1'b0)
      ADDR<=19'd0;
-  else if (cBLANK_n==1'b1)
+  else if (cBLANK_n==1'b1) begin
      ADDR<=ADDR+1;
+	end
 end
 //////////////////////////
 //////INDEX addr.
@@ -53,68 +77,160 @@ img_data	img_data_inst (
 	
 /////////////////////////
 //////Add switch-input logic here
-reg [9:0] x_square,y_square;
-wire [10:0] addressX,addressY;
-//reg [8:0] y;
-wire [18:0] address;
-assign address = (y_square*10'd640) + x_square;
-wire [6:0] width;
-assign width = 7'd100;
-assign addressX = ADDR % 640;
-assign addressY = ADDR / 640;
-reg [19:0] count;
 
-reg [7:0] index2;
+integer pixelWidth;
+
+integer addressRow, addressCol;
+integer boardPosition;
+integer boardRow, boardCol;
+
+ integer head1, head2;
+ integer length1, length2;
+ integer stage;
+ 
+ integer move1;
+
+integer applePosition;
+ 
+reg [7:0] color_index;
+
 
 initial begin
-	x_square = 10'd100;
-	y_square = 10'd100;
-	count = 20'd0;
+	pixelWidth = 12;
+	move1 = 2;
+	
+	applePosition = 40*10+25;
+	
 end
 
+integer j;
+reg isInImage;
+
+integer head1position, head2position;
+integer currPosition;
+reg [1:0] currDirection;
+
+// process snake's movement
 always@(posedge iVGA_CLK)
 begin
-	if (count < 20'd1000000) begin
-		count = count + 20'd1;
-	end 
-	else if (count == 20'd1000000) begin
-		count = 20'd0;
-		if (~up) begin
-			y_square = y_square - 10'd1;
-		end else if (~down) begin
-			y_square = y_square + 10'd1;
-		end else if (~left) begin
-			x_square = x_square - 10'd1;
-		end else if (~right) begin
-			x_square = x_square + 10'd1;
-		end
+
+	// TODO: uncomment the following line
+	//stage = snake_data[(1824-1600+1)*32-1 -:32];
+	//stage = 2;
+	
+	
+	// 1. get the stage
+	stage = snake_data[359:328];
+	
+	// 2. get the position of head and length
+	head1position = snake_data[231:200];
+	length1 = snake_data[295:264];
+	head2position = snake_data[263:232];
+	length2 = snake_data[327:296];
+	head1 = snake_data[391:360];
+	head2 = snake_data[423:392];
+	
+	// 3. loop through all directions to see if the current body part has a color
+	
+	if (stage== 32'd0) begin
+		color_index = 8'd2;
 	end
 	
-	if (addressX <= x_square + 10'd99 & addressX >= x_square & addressY <= y_square+10'd99 & addressY >= y_square) begin
-		index2 = 8'd2;
-	end
-	else begin
-		index2 = index[7:0];
-	end
 	
+	if (stage == 32'd2) begin
+		//color_index = 8'd1;
+	
+			addressRow = ADDR / 640;
+			addressCol = ADDR % 640; 
+			 
+			// check if ADDR is in the game screen (40x40 board)
+			if (addressCol < 480) begin
+				boardRow = addressRow/pixelWidth;
+				boardCol = addressCol/pixelWidth;
+				boardPosition = 40*boardRow + boardCol;
+				
+				isInImage = 1'b0;
+				
+				currPosition = head1position;
+				
+				if (currPosition == boardPosition) begin
+					color_index = 8'd1;
+					isInImage = 1'b1;
+				end
+				currDirection = snake_data[2*(head1)+1 -:2];
+				
+				
+				for (j=1; j<50; j=j+1) begin
+					if (j <= length1) begin 
+					
+						if (currDirection == 2'b00) begin
+							currPosition = currPosition - 40;
+						end
+						else if (currDirection == 2'b01) begin
+							currPosition = currPosition + 1;
+						end
+						else if (currDirection == 2'b10) begin
+							currPosition = currPosition + 40;
+						end
+						else if (currDirection == 2'b11) begin
+							currPosition = currPosition - 1;
+						end
+					
+						currDirection = snake_data[2*(head1+j)+1 -: 2];
+					
+						
+						if (currPosition == boardPosition) begin
+							color_index = 8'd1;
+							isInImage = 1'b1;
+						end
+					end
+				end
+				
+				if (boardPosition == applePosition) begin
+					color_index = 8'd3;
+					isInImage = 1'b1;
+				end
+				if (isInImage == 1'b0) begin
+					color_index = 8'd4;
+				end
+				
+				// TODO: display snake 2's positions
+				
+				
+			end
+
+			// draw boundaries of board
+			if (addressCol == 480) begin
+				color_index = 8'd0;
+			end
+//			else begin
+//				color_index = 8'd4;
+//			end
+		
+			
+	end
+	if (stage == 32'd3) begin 
+		color_index = 8'd3;
+	end
+//		else begin
+//			color_index = 8'd4;
+//		end
+
+
+
+	
+	
+	
+
+
 end
-/*
-always@(negedge up or negedge down or negedge left or negedge right)
-begin 
-	if (~up) begin
-		y_square = y_square - 10'd1;
-	end else if (~down) begin
-		y_square = y_square + 10'd1;
-	end else if (~left) begin
-		x_square = x_square - 10'd1;
-	end else if (~right) begin
-		x_square = x_square + 10'd1;
-	end
-end*/
+
+
+
 	
 //////Color table output
 img_index	img_index_inst (
-	.address ( index2 ),
+	.address ( color_index ),
 	.clock ( iVGA_CLK ),
 	.q ( bgr_data_raw)
 	);	
