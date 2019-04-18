@@ -14,7 +14,7 @@ module skeleton(resetn,
 	CLOCK_50,                                          // 50 MHz clock
 	up,down,left,right, reset, debug, isCollide1);  
 
-	wire [455 : 0] snake_data;
+	wire [487 : 0] snake_data;
 
 	output [31:0] debug;
 	output isCollide1;
