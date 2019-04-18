@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/qnt/Desktop/vga-example/simulation/modelsim
 valu
-Z1 !s110 1555456787
+Z1 !s110 1555586633
 !i10b 1
 !s100 87o6DP7h0j5mzfgWW<E9E0
 IWAaZUYeK1Tl2_G3iV@_ko2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1555441735
+Z3 w1555582490
 Z4 8C:/Users/qnt/Desktop/vga-example/processor/alu.v
 Z5 FC:/Users/qnt/Desktop/vga-example/processor/alu.v
 L0 1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1555456787.000000
+Z7 !s108 1555586633.000000
 Z8 !s107 C:/Users/qnt/Desktop/vga-example/processor/alu.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/alu.v|
 !i113 1
@@ -99,21 +99,21 @@ R11
 R12
 n@c@l@a_8
 vdecoder
-Z13 !s110 1555456786
+Z13 !s110 1555586632
 !i10b 1
-!s100 [JJ7k@gh>dbeK7U^b7IFV3
-I@?dRdCl[k?IoKC87^bYmf1
+!s100 W@IDen1[K6:NlL4KZgNkj3
+IhV0nXA>^Qh81UEKe8:X140
 R2
 R0
 R3
 Z14 8C:/Users/qnt/Desktop/vga-example/processor/regfile.v
 Z15 FC:/Users/qnt/Desktop/vga-example/processor/regfile.v
-L0 100
+L0 113
 R6
 r1
 !s85 0
 31
-Z16 !s108 1555456786.000000
+Z16 !s108 1555586632.000000
 Z17 !s107 C:/Users/qnt/Desktop/vga-example/processor/regfile.v|
 Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/regfile.v|
 !i113 1
@@ -123,14 +123,14 @@ R12
 vdffe_ref
 R13
 !i10b 1
-!s100 iZHi1gNK[H16H[Too>]Ca2
-Ie04zG>R17zd^_aFd[@68Z2
+!s100 oieRUoFVh=Yi[H>`kB=oP3
+I50IjBBKlZ@TJLaLc^B?EU2
 R2
 R0
 R3
 R14
 R15
-L0 158
+L0 171
 R6
 r1
 !s85 0
@@ -145,14 +145,14 @@ R12
 vdffe_ref_neg
 R13
 !i10b 1
-!s100 d]D2L9Qhz@k`54i<>LFoY2
-I2BMV6VI3BKn`beE<XO[Bi1
+!s100 c0DnRlBoXz_8@MThm>a@i1
+IhSba^_`zc<d62U>KcdPMe2
 R2
 R0
 R3
 R14
 R15
-L0 190
+L0 203
 R6
 r1
 !s85 0
@@ -209,51 +209,51 @@ R10
 R11
 R12
 vdmem
-Z23 !s110 1555456788
+R1
 !i10b 1
 !s100 Mf==1Z5X5eXB?1PVG7k`T3
 I3Qz[COnImPGKMfYR7Qm[T2
 R2
 R0
-w1555441753
+R3
 8C:/Users/qnt/Desktop/vga-example/dmem.v
 FC:/Users/qnt/Desktop/vga-example/dmem.v
-Z24 L0 39
+Z23 L0 39
 R6
 r1
 !s85 0
 31
-Z25 !s108 1555456788.000000
+R7
 !s107 C:/Users/qnt/Desktop/vga-example/dmem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example|C:/Users/qnt/Desktop/vga-example/dmem.v|
 !i113 1
 R10
-Z26 !s92 -vlog01compat -work work +incdir+C:/Users/qnt/Desktop/vga-example
+Z24 !s92 -vlog01compat -work work +incdir+C:/Users/qnt/Desktop/vga-example
 R12
 vequality5
 R13
 !i10b 1
-!s100 cl1I^@]hh4C?SM@fj625G3
-ILJPiiJI=K8`X1e:DgYj>G0
+!s100 >5U2j[68E<]78OzYS`Z]03
+ImE9zQFRWS>VBHE0WOWFGY1
 R2
 R0
-Z27 w1555451474
-Z28 8C:/Users/qnt/Desktop/vga-example/processor/processor.v
-Z29 FC:/Users/qnt/Desktop/vga-example/processor/processor.v
-L0 686
+Z25 w1555583943
+Z26 8C:/Users/qnt/Desktop/vga-example/processor/processor.v
+Z27 FC:/Users/qnt/Desktop/vga-example/processor/processor.v
+L0 695
 R6
 r1
 !s85 0
 31
 R16
-Z30 !s107 C:/Users/qnt/Desktop/vga-example/processor/processor.v|
-Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/processor.v|
+Z28 !s107 C:/Users/qnt/Desktop/vga-example/processor/processor.v|
+Z29 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/processor.v|
 !i113 1
 R10
 R11
 R12
 vimem
-R23
+R1
 !i10b 1
 !s100 <6ZX?jN`lhjjz1DmzUzL]1
 Ime5`aHPAJK4<Wb5fO68781
@@ -262,17 +262,17 @@ R0
 R3
 8C:/Users/qnt/Desktop/vga-example/imem.v
 FC:/Users/qnt/Desktop/vga-example/imem.v
-R24
+R23
 R6
 r1
 !s85 0
 31
-R25
+R7
 !s107 C:/Users/qnt/Desktop/vga-example/imem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example|C:/Users/qnt/Desktop/vga-example/imem.v|
 !i113 1
 R10
-R26
+R24
 R12
 vlatch_dx
 R1
@@ -355,7 +355,7 @@ R6
 r1
 !s85 0
 31
-R7
+R16
 !s107 C:/Users/qnt/Desktop/vga-example/processor/latch_pc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/latch_pc.v|
 !i113 1
@@ -363,7 +363,7 @@ R10
 R11
 R12
 vlatch_xm
-R1
+R13
 !i10b 1
 !s100 ^Q@V9MnBNP8KSI5e3E9YJ2
 Ifn=>goW]1FLD=:0A;H;:A3
@@ -377,7 +377,7 @@ R6
 r1
 !s85 0
 31
-R7
+R16
 !s107 C:/Users/qnt/Desktop/vga-example/processor/latch_xm.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/latch_xm.v|
 !i113 1
@@ -517,7 +517,7 @@ R10
 R11
 R12
 vmux_2_1_15_bits
-R1
+R13
 !i10b 1
 !s100 099c=YP81QSn`JigI=ecb1
 IE:XmKm60XGQWg4^n[Do:43
@@ -561,7 +561,7 @@ R10
 R11
 R12
 vmux_2_1_31_bits
-R1
+R13
 !i10b 1
 !s100 8XN4bF]?LM>WNk`AYm9=72
 I[z_@3eWBeSR=1RB]P;S5_0
@@ -715,13 +715,13 @@ R10
 R11
 R12
 vproc_tb
-R23
+!s110 1555586634
 !i10b 1
-!s100 DI6f3gmkgz`THo]=Q275`0
-IQk@TBk92I?GAUOAOBXa_?1
+!s100 9U[6?b3gncOUbKic3[KFl1
+II`CUaVW_[RFNhbP4PaU=E2
 R2
 R0
-w1555456524
+w1555586412
 8C:/Users/qnt/Desktop/vga-example/processor/proc_tb.v
 FC:/Users/qnt/Desktop/vga-example/processor/proc_tb.v
 L0 3
@@ -729,7 +729,7 @@ R6
 r1
 !s85 0
 31
-R25
+R7
 !s107 C:/Users/qnt/Desktop/vga-example/processor/proc_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/qnt/Desktop/vga-example/processor|C:/Users/qnt/Desktop/vga-example/processor/proc_tb.v|
 !i113 1
@@ -739,21 +739,21 @@ R12
 vprocessor
 R13
 !i10b 1
-!s100 ^D1P?[EFc:2^]CfSih3Gi1
-I2YFBggRT1iFd34DXX9zYb1
+!s100 kRNmIeF2_9A`eIGf1FJ`W0
+IGbKN7H;ImFhage=CV1=^G3
 R2
 R0
+R25
+R26
 R27
-R28
-R29
 L0 50
 R6
 r1
 !s85 0
 31
 R16
-R30
-R31
+R28
+R29
 !i113 1
 R10
 R11
@@ -805,8 +805,8 @@ R12
 vregfile
 R13
 !i10b 1
-!s100 2Fi>FO^j7XmU:h=UXTf0A1
-ILkRRMP2fMFT2NUV@JM24f2
+!s100 o0UT@:kAYX;G;cCO]O2oa0
+I^dhnj[PmGhQlDj]hdf@ha3
 R2
 R0
 R3
@@ -827,14 +827,14 @@ R12
 vregister
 R13
 !i10b 1
-!s100 VGMa;na?eLb<Y0M0o7>Q01
-I]n0>@j6XlVONF405CDid`0
+!s100 [<hhSh:BlgzLA]8`BD5;c2
+I_a7`T8;>1?@G<K7`WDcMY1
 R2
 R0
 R3
 R14
 R15
-L0 222
+L0 235
 R6
 r1
 !s85 0
@@ -849,14 +849,14 @@ R12
 vregister_2
 R13
 !i10b 1
-!s100 2VkVa]84O3c`dRTc?`fa01
-IInhmkmC7`@:5GjzWXQbJ_3
+!s100 ?F93`TMVAK<]V69VU`ZAg1
+I]Lm_FXmg`Gb83:g[CcHDC1
 R2
 R0
 R3
 R14
 R15
-L0 269
+L0 282
 R6
 r1
 !s85 0
@@ -871,14 +871,14 @@ R12
 vregister_neg
 R13
 !i10b 1
-!s100 o<i=JnY^hj`D?0^hmHmVZ0
-IhWJODlCW`@`AI>J0F:TlZ3
+!s100 A08fLl<8SKWY4Sk2e;L:?3
+Ie7QD3=DUIGzBo8ZI@f]Lk2
 R2
 R0
 R3
 R14
 R15
-L0 286
+L0 299
 R6
 r1
 !s85 0
@@ -900,7 +900,7 @@ R0
 R3
 R19
 R20
-Z32 L0 334
+Z30 L0 334
 R6
 r1
 !s85 0
@@ -979,7 +979,7 @@ R10
 R11
 R12
 vshift_register_8
-R1
+R13
 !i10b 1
 !s100 Q2XHDlF`A5z7]Tce^N8V?3
 I1hOU_Q1Gj>P4S]T3eA8@f2
@@ -1003,11 +1003,11 @@ R12
 vskeleton_proc
 R13
 !i10b 1
-!s100 _oAFOBd]IcLU][WhQeK`f3
-I7RdZUm;YPh^a?3:B^k2A@0
+!s100 >J?;a]O<Tn1FnXQG:j>B>2
+I^XCHAQ@PHPJXMRRbBJZQg3
 R2
 R0
-w1555454148
+w1555586352
 8C:/Users/qnt/Desktop/vga-example/processor/skeleton_proc.v
 FC:/Users/qnt/Desktop/vga-example/processor/skeleton_proc.v
 L0 12
@@ -1076,7 +1076,7 @@ R0
 R3
 R4
 R5
-L0 345
+Z31 L0 345
 R6
 r1
 !s85 0
@@ -1098,7 +1098,7 @@ R0
 R3
 R4
 R5
-R32
+R30
 R6
 r1
 !s85 0
@@ -1157,11 +1157,11 @@ R12
 vsnake_register
 R13
 !i10b 1
-!s100 ]Q?=C7=IBgnK_DBcGIV3=0
-IWLz[41[3;lBEz2P75M;]P0
+!s100 CgR5VPAFEP]c>l8B>;bXK1
+IORbzfXGe7N5eG9?z=FCZn1
 R2
 R0
-w1555451358
+w1555583954
 8C:/Users/qnt/Desktop/vga-example/processor/snake_register.v
 FC:/Users/qnt/Desktop/vga-example/processor/snake_register.v
 L0 1
@@ -1333,14 +1333,14 @@ R12
 vtri_buf
 R13
 !i10b 1
-!s100 fH1M^n[9D_af3=M`F8imz0
-IRBlaa;:?oD:MZi1nbfC1M1
+!s100 eXC4d^HM4QdA_]bKeO5CT1
+IPJ>4`8D`UR5HK@9UfKCk03
 R2
 R0
 R3
 R14
 R15
-L0 332
+R31
 R6
 r1
 !s85 0
@@ -1355,14 +1355,14 @@ R12
 vtri_reg
 R13
 !i10b 1
-!s100 ogICU3MgUGTD[aWzgMDea0
-I6Nn7MQ2EPDTK9fPDh1nzD0
+!s100 _>B@a_c5MAQK3HdOKoIG>1
+IcaiHo]7cX]R>CA1:_T_EU1
 R2
 R0
 R3
 R14
 R15
-L0 341
+L0 354
 R6
 r1
 !s85 0

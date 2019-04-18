@@ -15,7 +15,9 @@ module vga_controller(iRST_n,
 							 //stage, 
 							 //isDrawing);
 
-	
+
+input [455 : 0] snake_data;							
+							
 input iRST_n;
 input iVGA_CLK;
 input up, down, left, right;
@@ -26,7 +28,6 @@ output [7:0] b_data;
 output [7:0] g_data;  
 output [7:0] r_data;     
 
-input [423 : 0] snake_data;
 
 integer counter;
 
