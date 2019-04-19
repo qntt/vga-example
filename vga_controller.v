@@ -6,7 +6,7 @@ module vga_controller(iRST_n,
                       b_data,
                       g_data,
                       r_data, up, down, left, right,
-							 snake_data);
+							 snake_data, equal1, equal2);
 							 //board, 
 							 //snake1, snake2, 
 							 //head1, head2,
@@ -106,12 +106,24 @@ end
 
 integer j;
 reg isInImage;
+reg isInImage2;
 
 integer head1position, head2position;
-integer currPosition;
-reg [1:0] currDirection;
+integer currPosition1;
+reg [1:0] currDirection1;
 
-integer heartsTimer;
+integer currPosition2;
+reg [1:0] currDirection2;
+
+integer heartsTimer1;
+
+wire [32*50-1:0] position1, position2;
+
+output [49:0] equal1, equal2;
+
+snakeBody snbody (snake_data[199:0], position1, position2, head1Position, head2Position);
+equality_50 equal_sn1(position1, boardPosition, length1, equal1);
+equality_50 equal_sn2(position2, boardPosition, length2, equal2);
 
 // process snake's movement
 always@(posedge iVGA_CLK)
@@ -133,7 +145,7 @@ begin
 	head1 = snake_data[391:360];
 	head2 = snake_data[423:392];
 	
-	heartsTimer = snake_data[487:456];
+	heartsTimer1 = snake_data[487:456];
 	
 	// 3. loop through all directions to see if the current body part has a color
 	
@@ -150,52 +162,61 @@ begin
 			 
 			// check if ADDR is in the game screen (40x40 board)
 			if (addressCol < 480) begin
-				boardRow = addressRow/pixelWidth;
-				boardCol = addressCol/pixelWidth;
+				boardRow = addressRow/12;
+				boardCol = addressCol/12;
 				boardPosition = 40*boardRow + boardCol;
 				
 				isInImage = 1'b0;
+				isInImage2 = 1'b0;
 				
-				currPosition = head1position;
+				currPosition1 = head1position;
+				currPosition2 = head2position;
 				
-				if (currPosition == boardPosition) begin
+				if (currPosition1 == boardPosition) begin
 					color_index = 8'd1;
 					isInImage = 1'b1;
 				end
-				currDirection = snake_data[2*(head1)+1 -:2];
+				if (currPosition2 == boardPosition) begin
+					color_index = 8'd2;
+					isInImage2 = 1'b1;
+				end
+				currDirection1 = snake_data[2*(head1)+1 -:2];
+				currDirection2 = snake_data[2*(head2)+1 + 50 -:2];
 				
-				
-				for (j=1; j<50; j=j+1) begin
-					if (j <= length1) begin 
-					
-						if (currDirection == 2'b00) begin
-							currPosition = currPosition - 40;
-						end
-						else if (currDirection == 2'b01) begin
-							currPosition = currPosition + 1;
-						end
-						else if (currDirection == 2'b10) begin
-							currPosition = currPosition + 40;
-						end
-						else if (currDirection == 2'b11) begin
-							currPosition = currPosition - 1;
-						end
-					
-						currDirection = snake_data[2*(head1+j)+1 -: 2];
-					
-						
-						if (currPosition == boardPosition) begin
-							color_index = 8'd1;
-							isInImage = 1'b1;
-						end
-					end
+				if (equal1 > 50'b0) begin
+					color_index = 8'd1;
+					isInImage = 1'b1;
 				end
 				
+//				if (equal2 > 50'b0) begin
+//					color_index = 8'd2;
+//					isInImage2 = 1'b1;
+//				end
+				
+//				
+//				for (j=1; j<50; j=j+1) begin
+//					if (j < length1) begin 
+//						
+//						if (position1[32*(j+1)-1 -: 32] == boardPosition) begin
+//							color_index = 8'd1;
+//							isInImage = 1'b1;
+//						end
+//					end
+//					
+//					if (j < length2 && stage==4) begin 
+//					
+//						if (position2[32*(j+1)-1 -: 32] == boardPosition) begin
+//							color_index = 8'd2;
+//							isInImage2 = 1'b1;
+//						end
+//					end
+//				end
+//				
 				if (boardPosition == applePosition) begin
 					color_index = 8'd3;
 					isInImage = 1'b1;
 				end
-				if (isInImage == 1'b0) begin
+				if (isInImage == 1'b0 && isInImage2 == 1'b0) begin
 					color_index = 8'd4;
 				end
 				
@@ -210,7 +231,7 @@ begin
 			end
 			// area for drawing hearts timer
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
-				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
+				if (addressCol*100 < (600-520)*heartsTimer1 + 520*100) begin
 					color_index = 8'd3;
 				end
 				else begin
@@ -264,11 +285,73 @@ begin
 end
 
 endmodule
+
+
+
+module equality_50(position, boardPosition, length, equal);
+
+	input [32*50-1:0] position;
+	input [31:0] boardPosition, length;
+	
+	output [49:0] equal;
+	
+	genvar i;
+	generate
+		for (i=1; i<50; i=i+1) begin: loop_equality50
+			assign equal[i] = (position[32*(i+1)-1: 32*i]==boardPosition && i<length) ? 1'b1 : 1'b0;
+		end
+	endgenerate
+
+endmodule
  	
+	
+	
+	
 
+module snakeBody(snake_data, position1, position2, head1Position, head2Position);
 
+	input [199:0] snake_data;
 
+	output [32*50-1:0] position1, position2;
+	
+	input [31:0] head1Position, head2Position;
 
+	// for the heads
+
+	assign position1[31:0] = head1Position;
+	assign position2[31:0] = head2Position;
+
+	genvar i;
+	generate
+		for (i=1; i<50; i=i+1) begin: loop1_snakebody
+			snakeBodyPart snakebody1(
+				.prevPosition(position1[32*(i)-1:32*(i-1)]),
+				.prevDirection(snake_data[2*(i)-1:2*(i-1)]),
+				.position(position1[32*(i+1)-1:32*(i)])
+			);
+			
+			snakeBodyPart snakebody2(
+				.prevPosition(position2[32*(i)-1:32*(i-1)]),
+				.prevDirection(snake_data[2*(i+50)-1:2*(i-1+50)]),
+				.position(position2[32*(i+1)-1:32*(i)])
+			);
+		end
+	endgenerate
+
+endmodule
+
+module snakeBodyPart(prevPosition, prevDirection, position);
+
+	input [31:0] prevPosition;
+	input [1:0] prevDirection;
+	
+	output [31:0] position;
+	
+	mux_4_1 snake_pos_mux (.out(position), .in0(prevPosition-40), 
+		.in1(prevPosition+1), .in2(prevPosition+40), 
+		.in3(prevPosition-1), .select(prevDirection));
+
+endmodule
 
 
 

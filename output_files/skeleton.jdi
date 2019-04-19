@@ -1,8 +1,118 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="a8465cec0f2b5b98ee8c"/>
+    <hash md5_digest_80b="bac5193757a9ef365be3"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="skeleton.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <hub_info hub_ir_width="4" ir_width="4" node_addr_width="1" node_count="1"/>
+  <node_info>
+    <node hpath="equal1:d0|altsource_probe_top:in_system_sources_probes_0|altsource_probe:issp_impl" instance_id="0" mfg_id="110" node_id="9" sld_node_info="0x486E00" version="0">
+      <parameters>
+        <parameter name="lpm_type" type="string" value="altsource_probe"/>
+        <parameter name="lpm_hint" type="string" value="UNUSED"/>
+        <parameter name="sld_auto_instance_index" type="string" value="YES"/>
+        <parameter name="sld_instance_index" type="dec" value="0"/>
+        <parameter name="SLD_NODE_INFO" type="dec" value="4746752"/>
+        <parameter name="sld_ir_width" type="dec" value="4"/>
+        <parameter name="instance_id" type="string" value="NONE"/>
+        <parameter name="probe_width" type="dec" value="50"/>
+        <parameter name="source_width" type="dec" value="1"/>
+        <parameter name="source_initial_value" type="string" value="0"/>
+        <parameter name="enable_metastability" type="string" value="NO"/>
+      </parameters>
+      <inputs>
+        <port name="probe[0]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[0]"/>
+        <port name="probe[1]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[1]"/>
+        <port name="probe[2]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[2]"/>
+        <port name="probe[3]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[3]"/>
+        <port name="probe[4]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[4]"/>
+        <port name="probe[5]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[5]"/>
+        <port name="probe[6]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[6]"/>
+        <port name="probe[7]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[7]"/>
+        <port name="probe[8]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[8]"/>
+        <port name="probe[9]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[9]"/>
+        <port name="probe[10]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[10]"/>
+        <port name="probe[11]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[11]"/>
+        <port name="probe[12]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[12]"/>
+        <port name="probe[13]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[13]"/>
+        <port name="probe[14]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[14]"/>
+        <port name="probe[15]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[15]"/>
+        <port name="probe[16]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[16]"/>
+        <port name="probe[17]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[17]"/>
+        <port name="probe[18]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[18]"/>
+        <port name="probe[19]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[19]"/>
+        <port name="probe[20]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[20]"/>
+        <port name="probe[21]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[21]"/>
+        <port name="probe[22]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[22]"/>
+        <port name="probe[23]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[23]"/>
+        <port name="probe[24]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[24]"/>
+        <port name="probe[25]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[25]"/>
+        <port name="probe[26]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[26]"/>
+        <port name="probe[27]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[27]"/>
+        <port name="probe[28]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[28]"/>
+        <port name="probe[29]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[29]"/>
+        <port name="probe[30]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[30]"/>
+        <port name="probe[31]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[31]"/>
+        <port name="probe[32]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[32]"/>
+        <port name="probe[33]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[33]"/>
+        <port name="probe[34]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[34]"/>
+        <port name="probe[35]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[35]"/>
+        <port name="probe[36]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[36]"/>
+        <port name="probe[37]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[37]"/>
+        <port name="probe[38]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[38]"/>
+        <port name="probe[39]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[39]"/>
+        <port name="probe[40]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[40]"/>
+        <port name="probe[41]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[41]"/>
+        <port name="probe[42]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[42]"/>
+        <port name="probe[43]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[43]"/>
+        <port name="probe[44]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[44]"/>
+        <port name="probe[45]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[45]"/>
+        <port name="probe[46]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[46]"/>
+        <port name="probe[47]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[47]"/>
+        <port name="probe[48]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[48]"/>
+        <port name="probe[49]" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|probe[49]"/>
+        <port name="source_clk" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|source_clk"/>
+        <port name="source_ena" source="equal1:d0|altsource_probe_top:in_system_sources_probes_0|source_ena"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_raw_tck" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_raw_tck"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_tdi" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_tdi"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_usr1" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_usr1"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_cdr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_cdr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_sdr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_sdr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_e1dr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_e1dr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_udr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_udr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_cir" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_cir"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_uir" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_uir"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_tlr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_jtag_state_tlr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_clr" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_clr"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ena" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ena"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_0_" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_0_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_1_" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_1_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_2_" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_2_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_3_" source="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_in_3_"/>
+      </inputs>
+      <outputs>
+        <port name="source[0]"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_out_0_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_out_1_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_out_2_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_ir_out_3_"/>
+        <port name="jtag.bp.d0_in_system_sources_probes_0_issp_impl_tdo"/>
+      </outputs>
+    </node>
+  </node_info>
+  <sld_infos>
+    <sld_info hpath="equal1:d0" name="d0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME equal1 HAS_SOPCINFO 1 GENERATION_ID 1555702516"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+    <sld_info hpath="sld_hub:auto_hub|alt_sld_fab:\instrumentation_fabric_with_node_gen:instrumentation_fabric" library="alt_sld_fab" name="instrumentation_fabric">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME alt_sld_fab HAS_SOPCINFO 1"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

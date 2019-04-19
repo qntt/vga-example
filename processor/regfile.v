@@ -4,14 +4,15 @@ module regfile (
     ctrl_reset, ctrl_writeReg,
     ctrl_readRegA, ctrl_readRegB, data_writeReg,
     data_readRegA, data_readRegB,
-	 move1, debug
+	 move1, move2, debug, isMultiplayer
 );
 
    input clock, ctrl_writeEnable, ctrl_reset;
    input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
    input [31:0] data_writeReg;
 	
-	input [31:0] move1;
+	input [31:0] move1, move2;
+	input isMultiplayer;
 	output [31:0] debug;
 
    output [31:0] data_readRegA, data_readRegB;
@@ -78,7 +79,16 @@ module regfile (
 				 .data_in(data_writeReg)
 			);
 		end
-		for (i=22; i<32; i = i+1) begin: genreg2
+		for (i=23; i<=27; i = i+1) begin: genreg2
+			register r2 (
+				 .data_out(read_output[32*(i+1)-1: 32*i]),
+				 .clock(clock),
+				 .ctrl_writeEnable(write_enable_bit[i]),
+				 .ctrl_reset(ctrl_reset), 
+				 .data_in(data_writeReg)
+			);
+		end
+		for (i=29; i<32; i = i+1) begin: genreg3
 			register r2 (
 				 .data_out(read_output[32*(i+1)-1: 32*i]),
 				 .clock(clock),
@@ -94,6 +104,24 @@ module regfile (
 				 .ctrl_writeEnable(1'b1),
 				 .ctrl_reset(ctrl_reset), 
 				 .data_in(move1)
+			);
+			register r22 (
+				 .data_out(read_output[32*(22+1)-1: 32*22]),
+				 .clock(clock),
+				 .ctrl_writeEnable(1'b1),
+				 .ctrl_reset(ctrl_reset), 
+				 .data_in(move2)
+			);
+			
+			wire [31:0] isMultiplayerWrapper;
+			assign isMultiplayerWrapper[31:1] = 31'b0;
+			assign isMultiplayerWrapper[0] = isMultiplayer;
+			register r28 (
+				 .data_out(read_output[32*(28+1)-1: 32*28]),
+				 .clock(clock),
+				 .ctrl_writeEnable(1'b1),
+				 .ctrl_reset(ctrl_reset), 
+				 .data_in(isMultiplayerWrapper)
 			);
 	endgenerate
 	

@@ -12,13 +12,17 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,                                          // 50 MHz clock
-	up,down,left,right, reset, debug, isCollide1);  
+	up,down,left,right, reset, debug, isCollide1, up2, down2, left2, right2, isMultiplayer);  
 
 	wire [487 : 0] snake_data;
 
 	output [31:0] debug;
 	output isCollide1;
 	assign isCollide1 = snake_data[424];
+	
+	wire [49:0] equal1, equal2;
+	
+	equal1 d0 (.probe(equal1));
 		
 	////////////////////////	VGA	////////////////////////////
 	output			VGA_CLK;   				//	VGA Clock
@@ -30,7 +34,8 @@ module skeleton(resetn,
 	output	[7:0]	VGA_G;	 				//	VGA Green[9:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[9:0]
 	input				CLOCK_50;
-	input up,down,left,right, reset;
+	input up,down,left,right, reset, up2, down2, left2, right2;
+	input isMultiplayer;
 
 	////////////////////////	PS2	////////////////////////////
 	input 			resetn;
@@ -122,6 +127,20 @@ module skeleton(resetn,
 		else if (left==1'b0 && move1 != 2) begin
 			move1 = 4;
 		end
+		
+		
+		if (up2==1'b0 && move2 != 3) begin
+			move2 = 1;
+		end
+		else if (right2==1'b0 && move2 != 4) begin
+			move2 = 2;
+		end
+		else if (down2==1'b0 && move2 != 1) begin
+			move2 = 3;
+		end
+		else if (left2==1'b0 && move2 != 2) begin
+			move2 = 4;
+		end
 	end
 	
 	
@@ -138,7 +157,7 @@ module skeleton(resetn,
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
 								 .r_data(VGA_R), .up(up), .down(down), .left(left), .right(right),
-								 .snake_data(snake_data));
+								 .snake_data(snake_data), .equal1(equal1), .equal2(equal2));
 								 //.board(board), 
 								 //.snake1(snake1), .snake2(snake2), 
 								 //.head1(head1), .head2(head2),
@@ -186,7 +205,7 @@ module skeleton(resetn,
         data_writeReg,
         data_readRegA,
         data_readRegB,
-		  move1, debug
+		  move1, move2, debug, isMultiplayer
     );
 	 
 	 /** PROCESSOR **/

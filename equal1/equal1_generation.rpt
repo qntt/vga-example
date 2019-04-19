@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\qnt\Desktop\vga-example\equal1.qsys --block-symbol-file --output-directory=C:\Users\qnt\Desktop\vga-example\equal1 --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading vga-example/equal1.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 17.1]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\qnt\Desktop\vga-example\equal1.qsys --synthesis=VERILOG --output-directory=C:\Users\qnt\Desktop\vga-example\equal1\synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading vga-example/equal1.qsys
+Progress: Reading input file
+Progress: Adding in_system_sources_probes_0 [altera_in_system_sources_probes 17.1]
+Progress: Parameterizing module in_system_sources_probes_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: equal1: Generating equal1 "equal1" for QUARTUS_SYNTH
+Info: in_system_sources_probes_0: "equal1" instantiated altera_in_system_sources_probes "in_system_sources_probes_0"
+Info: equal1: Done "equal1" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
