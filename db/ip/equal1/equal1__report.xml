@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2019.04.19.15:35:17"
- outputDirectory="C:/Users/qnt/Desktop/vga-example/db/ip/equal1/">
+ date="2019.04.20.09:57:07"
+ outputDirectory="C:/Users/qnt/Desktop/noloop-vga-example/db/ip/equal1/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -46,29 +46,29 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="equal1:1.0:AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1555702516,AUTO_UNIQUE_ID=(altera_in_system_sources_probes:17.1:create_source_clock=false,create_source_clock_enable=false,device_family=Cyclone IV E,enable_metastability=NO,gui_use_auto_index=true,instance_id=NONE,probe_width=50,sld_auto_instance_index=YES,sld_instance_index=0,source_initial_value=0,source_width=1)"
+   parameterizationKey="equal1:1.0:AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1555768626,AUTO_UNIQUE_ID=(altera_in_system_sources_probes:17.1:create_source_clock=false,create_source_clock_enable=false,device_family=Cyclone IV E,enable_metastability=NO,gui_use_auto_index=true,instance_id=NONE,probe_width=50,sld_auto_instance_index=YES,sld_instance_index=0,source_initial_value=0,source_width=1)"
    instancePathKey="equal1"
    kind="equal1"
    version="1.0"
    name="equal1">
-  <parameter name="AUTO_GENERATION_ID" value="1555702516" />
+  <parameter name="AUTO_GENERATION_ID" value="1555768626" />
   <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_UNIQUE_ID" value="" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
   <generatedFiles>
    <file
-       path="C:/Users/qnt/Desktop/vga-example/db/ip/equal1/equal1.v"
+       path="C:/Users/qnt/Desktop/noloop-vga-example/db/ip/equal1/equal1.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/Users/qnt/Desktop/vga-example/db/ip/equal1/submodules/altsource_probe_top.v"
+       path="C:/Users/qnt/Desktop/noloop-vga-example/db/ip/equal1/submodules/altsource_probe_top.v"
        type="VERILOG"
        attributes="" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="C:/Users/qnt/Desktop/vga-example/equal1.qsys" />
+   <file path="C:/Users/qnt/Desktop/noloop-vga-example/equal1.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
@@ -113,7 +113,7 @@
   <parameter name="gui_use_auto_index" value="true" />
   <generatedFiles>
    <file
-       path="C:/Users/qnt/Desktop/vga-example/db/ip/equal1/submodules/altsource_probe_top.v"
+       path="C:/Users/qnt/Desktop/noloop-vga-example/db/ip/equal1/submodules/altsource_probe_top.v"
        type="VERILOG"
        attributes="" />
   </generatedFiles>

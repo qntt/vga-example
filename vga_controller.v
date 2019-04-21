@@ -121,7 +121,7 @@ wire [32*50-1:0] position1, position2;
 
 output [49:0] equal1, equal2;
 
-snakeBody snbody (snake_data[199:0], position1, position2, head1Position, head2Position);
+snakeBody snbody (snake_data[199:0], position1, position2, head1Position, head2Position, head1, head2);
 equality_50 equal_sn1(position1, boardPosition, length1, equal1);
 equality_50 equal_sn2(position2, boardPosition, length2, equal2);
 
@@ -155,7 +155,7 @@ begin
 	
 	
 	if (stage == 32'd2) begin
-		//color_index = 8'd1;
+		color_index = 8'd3;
 	
 			addressRow = ADDR / 640;
 			addressCol = ADDR % 640; 
@@ -183,15 +183,67 @@ begin
 				currDirection1 = snake_data[2*(head1)+1 -:2];
 				currDirection2 = snake_data[2*(head2)+1 + 50 -:2];
 				
-				if (equal1 > 50'b0) begin
-					color_index = 8'd1;
-					isInImage = 1'b1;
-				end
+//				if (equal1 > 50'b0) begin
+//					color_index = 8'd1;
+//					isInImage = 1'b1;
+//				end
 				
 //				if (equal2 > 50'b0) begin
 //					color_index = 8'd2;
 //					isInImage2 = 1'b1;
 //				end
+
+				for (j=1; j<50; j=j+1) begin
+					if (j <= length1) begin 
+					
+						if (currDirection1 == 2'b00) begin
+							currPosition1 = currPosition1 - 40;
+						end
+						else if (currDirection1 == 2'b01) begin
+							currPosition1 = currPosition1 + 1;
+						end
+						else if (currDirection1 == 2'b10) begin
+							currPosition1 = currPosition1 + 40;
+						end
+						else if (currDirection1 == 2'b11) begin
+							currPosition1 = currPosition1 - 1;
+						end
+					
+						currDirection1 = snake_data[2*(head1+j)+1 -: 2];
+					
+						
+						if (currPosition1 == boardPosition) begin
+							color_index = 8'd1;
+							isInImage = 1'b1;
+						end
+					end
+				end
+				
+				for (j=1; j<50; j=j+1) begin
+					if (j <= length2) begin 
+					
+						if (currDirection2 == 2'b00) begin
+							currPosition2 = currPosition2 - 40;
+						end
+						else if (currDirection2 == 2'b01) begin
+							currPosition2 = currPosition2 + 1;
+						end
+						else if (currDirection2 == 2'b10) begin
+							currPosition2 = currPosition2 + 40;
+						end
+						else if (currDirection2 == 2'b11) begin
+							currPosition2 = currPosition2 - 1;
+						end
+					
+						currDirection2 = snake_data[2*(head2+j)+1 -: 2];
+					
+						
+						if (currPosition2 == boardPosition) begin
+							color_index = 8'd1;
+							isInImage = 1'b1;
+						end
+					end
+				end
 				
 //				
 //				for (j=1; j<50; j=j+1) begin
@@ -308,13 +360,13 @@ endmodule
 	
 	
 
-module snakeBody(snake_data, position1, position2, head1Position, head2Position);
+module snakeBody(snake_data, position1, position2, head1Position, head2Position, head1, head2);
 
 	input [199:0] snake_data;
 
 	output [32*50-1:0] position1, position2;
 	
-	input [31:0] head1Position, head2Position;
+	input [31:0] head1Position, head2Position, head1, head2;
 
 	// for the heads
 
@@ -326,13 +378,13 @@ module snakeBody(snake_data, position1, position2, head1Position, head2Position)
 		for (i=1; i<50; i=i+1) begin: loop1_snakebody
 			snakeBodyPart snakebody1(
 				.prevPosition(position1[32*(i)-1:32*(i-1)]),
-				.prevDirection(snake_data[2*(i)-1:2*(i-1)]),
+				.prevDirection((i+head1 < 50) ? snake_data[2*(i+head1)-1 -:2] : snake_data[2*(i+head1-50)-1 -:2]),
 				.position(position1[32*(i+1)-1:32*(i)])
 			);
 			
 			snakeBodyPart snakebody2(
 				.prevPosition(position2[32*(i)-1:32*(i-1)]),
-				.prevDirection(snake_data[2*(i+50)-1:2*(i-1+50)]),
+				.prevDirection((i+head2 < 50) ? snake_data[2*(i+head2+50)-1 -:2] : snake_data[2*(i+head2+50-50)-1 -:2]),
 				.position(position2[32*(i+1)-1:32*(i)])
 			);
 		end
@@ -352,6 +404,9 @@ module snakeBodyPart(prevPosition, prevDirection, position);
 		.in3(prevPosition-1), .select(prevDirection));
 
 endmodule
+
+
+
 
 
 
