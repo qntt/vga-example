@@ -1,0 +1,20 @@
+module linear_rng ();
+
+input clock;
+input [31:0] initialSeed;
+
+output reg [31:0] random;
+
+initial begin
+
+	random = initialSeed;
+
+end
+
+always @(posedge clock) begin
+
+	random = (214013 * random + 2531011) % 1600;
+
+end
+
+endmodule 

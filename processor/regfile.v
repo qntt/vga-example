@@ -4,12 +4,14 @@ module regfile (
     ctrl_reset, ctrl_writeReg,
     ctrl_readRegA, ctrl_readRegB, data_writeReg,
     data_readRegA, data_readRegB,
-	 move1, debug
+	 move1, debug, randomNum
 );
 
    input clock, ctrl_writeEnable, ctrl_reset;
    input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
    input [31:0] data_writeReg;
+	
+	input [31:0] randomNum;
 	
 	input [31:0] move1;
 	output [31:0] debug;
@@ -78,8 +80,17 @@ module regfile (
 				 .data_in(data_writeReg)
 			);
 		end
-		for (i=22; i<32; i = i+1) begin: genreg2
+		for (i=22; i<=28; i = i+1) begin: genreg2
 			register r2 (
+				 .data_out(read_output[32*(i+1)-1: 32*i]),
+				 .clock(clock),
+				 .ctrl_writeEnable(write_enable_bit[i]),
+				 .ctrl_reset(ctrl_reset), 
+				 .data_in(data_writeReg)
+			);
+		end
+		for (i=30; i<32; i = i+1) begin: genreg3
+			register r3 (
 				 .data_out(read_output[32*(i+1)-1: 32*i]),
 				 .clock(clock),
 				 .ctrl_writeEnable(write_enable_bit[i]),
@@ -89,12 +100,19 @@ module regfile (
 		end
 		// separate register for r21 (movement direction for snake1)
 		register r21 (
-				 .data_out(read_output[32*(21+1)-1: 32*21]),
-				 .clock(clock),
-				 .ctrl_writeEnable(1'b1),
-				 .ctrl_reset(ctrl_reset), 
-				 .data_in(move1)
-			);
+			 .data_out(read_output[32*(21+1)-1: 32*21]),
+			 .clock(clock),
+			 .ctrl_writeEnable(1'b1),
+			 .ctrl_reset(ctrl_reset), 
+			 .data_in(move1)
+		);
+		register r29 (
+			 .data_out(read_output[32*(29+1)-1: 32*29]),
+			 .clock(clock),
+			 .ctrl_writeEnable(1'b1),
+			 .ctrl_reset(ctrl_reset), 
+			 .data_in(randomNum)
+		);
 	endgenerate
 	
 	assign debug = read_output[32*(1+1)-1: 32*1];

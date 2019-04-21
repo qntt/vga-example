@@ -12,7 +12,7 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,                                          // 50 MHz clock
-	up,down,left,right, reset, debug, isCollide1);  
+	up,down,left,right, reset, debug, isCollide1, randomNumOut);  
 
 	wire [487 : 0] snake_data;
 
@@ -44,7 +44,9 @@ module skeleton(resetn,
 	output   [11:0]   debug_addr;
 	
 	
-	
+	wire [31:0] randomNum;
+	output [31:0] randomNumOut;
+	assign randomNumOut = randomNum;
 	
 	
 	wire			 clock;
@@ -101,11 +103,14 @@ module skeleton(resetn,
 	//wire wren_fromVGA;
 	//wire [31:0] q_dmem_toVGA;
 	
-	integer move1, move2;
+	integer move1, move2, counter;
+	reg loadSeed;
 	
 	initial begin
-		move1 = 2;
-		move2 = 2;
+		move1 = 32'd2;
+		move2 = 32'd2;
+		counter = 32'd0;
+		loadSeed = 1'b1;
 	end
 	
 	
@@ -122,6 +127,15 @@ module skeleton(resetn,
 		else if (left==1'b0 && move1 != 2) begin
 			move1 = 4;
 		end
+	end
+	
+	always@(posedge clock) begin
+	
+		if (counter == 1) begin
+			loadSeed = 1'b0;
+		end
+		counter = counter + 1;
+	
 	end
 	
 	
@@ -170,6 +184,13 @@ module skeleton(resetn,
         .q          (/* 32-bit data out */q_dmem)    // data from dmem
     );
 	 
+
+	 linear_rng lr1 (.clock(clock), .initialSeed(32'b0), .random(randomNum));
+	 //rng rng1(.clk(VGA_CLK), .reset(1'b1), .loadseed_i(loadSeed), .rngOut(randomNum[11:0]));
+	 //assign randomNum[31:12] = 20'b0;
+//	 assign randomNum = 32'b0;
+	 
+	 
 	 /** REGFILE **/
     // Instantiate your regfile
     wire ctrl_writeEnable;
@@ -186,8 +207,9 @@ module skeleton(resetn,
         data_writeReg,
         data_readRegA,
         data_readRegB,
-		  move1, debug
+		  move1, debug, randomNum
     );
+	 
 	 
 	 /** PROCESSOR **/
     processor my_processor(

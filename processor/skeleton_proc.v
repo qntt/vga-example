@@ -9,12 +9,18 @@
  * inspect which signals the processor tries to assert when.
  */
 
-module skeleton_proc(clock, reset, move1);
+module skeleton_proc(clock, reset, stage, head1Position, head1);
     input clock, reset;
 	 
-	 wire [455 : 0] snake_data;
-	 input [31:0] move1;
+	 wire [487 : 0] snake_data;
+	 output [31:0] stage;
+	 assign stage = snake_data[359:328];
 	 
+	 output [31:0] head1Position;
+	 assign head1Position = snake_data[231:200];
+	 
+	 output [31:0] head1;
+	 assign head1 = snake_data[391:360];
 
     /** IMEM **/
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
@@ -48,6 +54,30 @@ module skeleton_proc(clock, reset, move1);
     wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
     wire [31:0] data_writeReg;
     wire [31:0] data_readRegA, data_readRegB;
+	 wire [31:0] randomNum, debug;
+	 
+	 integer counter;
+	 reg loadSeed;
+	 integer move1;
+	 
+	 initial begin
+		move1 = 2;
+		counter = 0;
+		loadSeed = 1'b1;
+	end
+	
+	always@(posedge VGA_CLK) begin
+	
+		if (counter == 1) begin
+			loadSeed = 1'b0;
+		end
+		counter = counter + 1;
+	
+	end
+	 
+	 rng rng1(.clk(VGA_CLK), .reset(1'b1), .loadseed_i(loadSeed), .rngOut(randomNum[11:0]));
+	 assign randomNum[31:12] = 20'b0;
+
     regfile my_regfile(
         clock,
         ctrl_writeEnable,
@@ -58,7 +88,7 @@ module skeleton_proc(clock, reset, move1);
         data_writeReg,
         data_readRegA,
         data_readRegB,
-		  move1
+		  move1, debug, randomNum
     );
 
     /** PROCESSOR **/

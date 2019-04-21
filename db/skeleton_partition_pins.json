@@ -340,6 +340,46 @@
 					"strict" : false
 				},
 				{
+					"name" : "randomNumOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "randomNumOut[9]",
+					"strict" : false
+				},
+				{
 					"name" : "ps2_clock",
 					"strict" : false
 				},

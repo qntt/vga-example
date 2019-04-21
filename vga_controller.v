@@ -100,7 +100,7 @@ initial begin
 	pixelWidth = 12;
 	move1 = 2;
 	
-	applePosition = 40*10+25;
+	//applePosition = 40*10+25;
 	
 end
 
@@ -132,6 +132,7 @@ begin
 	length2 = snake_data[327:296];
 	head1 = snake_data[391:360];
 	head2 = snake_data[423:392];
+	applePosition = snake_data[455:424];
 	
 	heartsTimer = snake_data[487:456];
 	
