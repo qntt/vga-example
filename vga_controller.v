@@ -108,8 +108,8 @@ integer j;
 reg isInImage;
 
 integer head1position, head2position;
-integer currPosition;
-reg [1:0] currDirection;
+integer currPosition, currPosition2;
+reg [1:0] currDirection, currDirection2;
 
 integer heartsTimer;
 
@@ -190,6 +190,33 @@ begin
 						end
 					end
 				end
+				
+				for (j=1; j<50; j=j+1) begin
+					if (j <= length2) begin 
+					
+						if (currDirection2 == 2'b00) begin
+							currPosition2 = currPosition2 - 40;
+						end
+						else if (currDirection2 == 2'b01) begin
+							currPosition2 = currPosition2 + 1;
+						end
+						else if (currDirection2 == 2'b10) begin
+							currPosition2 = currPosition2 + 40;
+						end
+						else if (currDirection2 == 2'b11) begin
+							currPosition2 = currPosition2 - 1;
+						end
+					
+						currDirection2 = snake_data[2*(head2+j)+1 -: 2];
+					
+						
+						if (currPosition2 == boardPosition) begin
+							color_index = 8'd1;
+							isInImage = 1'b1;
+						end
+					end
+				end
+				
 				
 				if (boardPosition == applePosition) begin
 					color_index = 8'd3;
