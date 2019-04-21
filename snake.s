@@ -21,6 +21,9 @@ loop:
 
   stage2:
     jal moveSnake
+    jal checkCollisions
+    jal checkAppleCollision
+    jal decrementCounters
 
   #### BEGIN DRAWING ON VGA
   # save head positions
@@ -42,8 +45,13 @@ loop:
   sw $s1, 105($0)
   sw $s2, 106($0)
 
-  # save collision
-  sw $s7, 107($0)
+  # save apple
+  lw $t0, 1800($0)
+  sw $t0, 107($0)
+
+  # save hearts timer
+  lw $t0, 1858($0)
+  sw $t0, 108($0)
 
   jal displaySnake
 
@@ -60,13 +68,21 @@ loop:
   endloop:
     j loop
 
-init:
-	## Clear DMEM
-	jal clearDMEM
+displaySnake:
+  addi $t0, $0, 0
+  addi $t1, $0, 108
 
-  # define apple locations (10,25)
-  addi $t1, $0, 425
-  sw $t1, 1800($0)
+  displayLoop:
+  
+  blt $t1, $t0, returnToLoop
+    add $0, $0, $0    # loadSnake $t0
+    addi $t0, $t0, 1
+  j displayLoop
+  
+  returnToLoop:
+  jr $ra
+
+init:
   
   # initial values of snake is (20,20), (20,21), (20,22)
                     # define the initial head of the snakes
@@ -109,23 +125,49 @@ init:
   sw $t2, 1822($0)
 
   # define initial direction of snakes
-  #addi $s5, $0, 2
-  #addi $s6, $0, 2
+  addi $s5, $0, 2
+  addi $s6, $0, 2
 
   # reset the score
   sw $0, 1820($0)
   sw $0, 1821($0)
+
+  # reset the hearts counter
+  addi $t0, $0, 100
+  sw $t0, 1858($0)
+
+  # define apple locations (10,25)
+  addi $t1, $0, 425
+  sw $t1, 1800($0)
+  addi $t2, $0, 3
+  sw $t2, 2525($0)
 
   # set stage to 2
   addi $s0, $0, 2
 
   jr $ra
 
+decrementCounters:
+
+	# heart timer
+	# timer = timer - 1;
+	# if (timer == 0) {
+	# 	stage = 3;
+	# }
+	lw $t0, 1858($0)
+	addi $t1, $0, 1
+	sub $t0, $t0, $t1
+	sw $t0, 1858($0)
+	bne $t0, $0, heartTimerNotZero
+	# at this point means counter is 0
+	addi $s0, $0, 3
+
+	heartTimerNotZero:
+
+	jr $ra
+
 
 moveSnake:
-	lw $t0, 1600($s1)
-	add $1, $t0, $0
-
   # length of snake 1 (t1)
   lw $t1, 1822($0)
   # tail of snake 1 (t2)
@@ -293,10 +335,14 @@ moveSnake:
 
   notMoveLeft:
 
-  # check if snake eats apple
-  #    if (snake1[head1] == applePosition) begin
+
+  jr $ra
+
+checkAppleCollision:
+	# check if snake eats apple
+  #    if (snake1[head1] == applePosition) {
   #      length1 = length1 + 1;
-  #    end
+  #    }
   lw $t0, 2000($s1)		# snake1[head1]
   lw $t1, 1800($0)		# apple position
   bne $t0, $t1, noEatApple
@@ -304,8 +350,37 @@ moveSnake:
   addi $t1, $t1, 1
   sw $t1, 1822($0)
 
+  # increment score
+  lw $t0, 1822($0)
+  addi $t0, $t0, 1
+  sw $t0, 1822($0)
+
+  # generate new apple location
+  # ran = get next random value
+  # while (board[ran] == 0) {
+  #   ran = new random
+  # }
+  # applePosition = ran;
+  # board[ran] = 3;
+
+  beginAppleGenerationLoop:
+  add $t0, $0, $29    # r29 stores the random num
+  lw $t1, 2100($t0)
+  bne $t1, $0, beginAppleGenerationLoop
+  # at this point means no collision
+  sw $t0, 1800($0)
+  addi $t2, $0, 3
+  sw $t2, 2100($t0)
+
+  # reset the hearts counter
+  addi $t0, $0, 100
+  sw $t0, 1858($0)
+
   noEatApple:
 
+  jr $ra
+
+checkCollisions:
   # checks for self-collision or collision with other snake
   # if (isCollide1 == 0) {
   # 	int boardValue = board[snake1[head1]];
@@ -362,7 +437,7 @@ moveSnake:
 
 	noCollision:
 
-  jr $ra
+	jr $ra
 
 
 # delay by $a0 cycles
@@ -371,21 +446,6 @@ delay:
   delayloop1:
     addi $t0, $t0, 1
     bne $t0, $a0, delayloop1
-  jr $ra
-
-
-displaySnake:
-  addi $t0, $0, 0
-  addi $t1, $0, 107
-
-  displayLoop:
-  
-  blt $t1, $t0, returnToLoop
-    add $0, $0, $0    # loadSnake $t0
-    addi $t0, $t0, 1
-  j displayLoop
-  
-  returnToLoop:
   jr $ra
 
 clearDMEM:
@@ -397,4 +457,5 @@ clearDMEM:
 		addi $t0, $t0, 1
 	endClearDMEMLoop:
 	jr $ra
+
 
