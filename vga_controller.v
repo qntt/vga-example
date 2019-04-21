@@ -45,6 +45,7 @@ reg [23:0] bgr_data;
 wire VGA_CLK_n;
 wire [7:0] index;
 wire [23:0] bgr_data_raw;
+wire [23:0] bg_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
 ////
 
@@ -90,6 +91,7 @@ integer boardRow, boardCol;
  integer stage;
  
  integer move1;
+ integer bgistrue;
 
 integer applePosition;
  
@@ -116,6 +118,11 @@ integer heartsTimer;
 // process snake's movement
 always@(posedge iVGA_CLK)
 begin
+
+bgistrue=0;
+//
+//
+//color_index=index;
 
 	// TODO: uncomment the following line
 	//stage = snake_data[(1824-1600+1)*32-1 -:32];
@@ -196,7 +203,8 @@ begin
 					isInImage = 1'b1;
 				end
 				if (isInImage == 1'b0) begin
-					color_index = 8'd4;
+					color_index = index;
+					bgistrue=1;
 				end
 				
 				// TODO: display snake 2's positions
@@ -214,11 +222,13 @@ begin
 					color_index = 8'd3;
 				end
 				else begin
-					color_index = 8'd4;
+					color_index = index;
+					bgistrue=1;
 				end
 			end
 			else begin
-				color_index = 8'd4;
+				color_index = index;
+				bgistrue=1;
 			end
 		
 			
@@ -248,9 +258,18 @@ img_index	img_index_inst (
 	.clock ( iVGA_CLK ),
 	.q ( bgr_data_raw)
 	);	
+img_index1	img_index_inst111 (
+	.address ( color_index ),
+	.clock ( iVGA_CLK ),
+	.q ( bg_data_raw)
+	);	
 //////
 //////latch valid data at falling edge;
-always@(posedge VGA_CLK_n) bgr_data <= bgr_data_raw;
+always@(posedge VGA_CLK_n) 
+begin
+if (bgistrue==0) bgr_data <= bgr_data_raw;
+else bgr_data <= bg_data_raw;
+end
 assign r_data = bgr_data[23:16];
 assign g_data = bgr_data[15:8];
 assign b_data = bgr_data[7:0]; 
