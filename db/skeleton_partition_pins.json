@@ -414,6 +414,22 @@
 				{
 					"name" : "left",
 					"strict" : false
+				},
+				{
+					"name" : "right2",
+					"strict" : false
+				},
+				{
+					"name" : "down2",
+					"strict" : false
+				},
+				{
+					"name" : "up2",
+					"strict" : false
+				},
+				{
+					"name" : "left2",
+					"strict" : false
 				}
 			]
 		}

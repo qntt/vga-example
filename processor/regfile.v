@@ -4,7 +4,7 @@ module regfile (
     ctrl_reset, ctrl_writeReg,
     ctrl_readRegA, ctrl_readRegB, data_writeReg,
     data_readRegA, data_readRegB,
-	 move1, debug, randomNum
+	 move1, debug, randomNum, move2
 );
 
    input clock, ctrl_writeEnable, ctrl_reset;
@@ -13,7 +13,7 @@ module regfile (
 	
 	input [31:0] randomNum;
 	
-	input [31:0] move1;
+	input [31:0] move1, move2;
 	output [31:0] debug;
 
    output [31:0] data_readRegA, data_readRegB;
@@ -80,7 +80,7 @@ module regfile (
 				 .data_in(data_writeReg)
 			);
 		end
-		for (i=22; i<=28; i = i+1) begin: genreg2
+		for (i=23; i<=28; i = i+1) begin: genreg2
 			register r2 (
 				 .data_out(read_output[32*(i+1)-1: 32*i]),
 				 .clock(clock),
@@ -105,6 +105,13 @@ module regfile (
 			 .ctrl_writeEnable(1'b1),
 			 .ctrl_reset(ctrl_reset), 
 			 .data_in(move1)
+		);
+		register r22 (
+			 .data_out(read_output[32*(22+1)-1: 32*22]),
+			 .clock(clock),
+			 .ctrl_writeEnable(1'b1),
+			 .ctrl_reset(ctrl_reset), 
+			 .data_in(move2)
 		);
 		register r29 (
 			 .data_out(read_output[32*(29+1)-1: 32*29]),

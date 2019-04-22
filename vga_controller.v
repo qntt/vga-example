@@ -108,16 +108,18 @@ integer j;
 reg isInImage;
 
 integer head1position, head2position;
-integer currPosition;
+integer currPosition, currPosition2;
 reg [1:0] currDirection;
 
 integer heartsTimer;
 
-wire isBoardPositionPresent;
+wire isBoardPositionPresent, isBoardPositionPresent2;
 
 
 // for snake 1 [110...119]
 TargetFindModule tf_module1 (.values(snake_data[629:520]), .target(boardPosition[10:0]), .isTargetPresent(isBoardPositionPresent));
+
+TargetFindModule tf_module2 (.values(snake_data[739:630]), .target(boardPosition[10:0]), .isTargetPresent(isBoardPositionPresent2));
 
 // process snake's movement
 always@(posedge iVGA_CLK)
@@ -163,17 +165,26 @@ begin
 				
 				isInImage = 1'b0;
 				
-				currPosition = head1position;
 				
-				if (currPosition == boardPosition) begin
+				if (head1position == boardPosition) begin
 					color_index = 8'd1;
 					isInImage = 1'b1;
 				end
-				currDirection = snake_data[2*(head1)+1 -:2];
+				
+				if (head2position == boardPosition) begin
+					color_index = 8'd2;
+					isInImage = 1'b1;
+				end
 				
 				
 				if (isBoardPositionPresent == 1'b1) begin
 					color_index = 8'd1;
+					isInImage = 1'b1;
+				end
+				
+				
+				if (isBoardPositionPresent2 == 1'b1) begin
+					color_index = 8'd2;
 					isInImage = 1'b1;
 				end
 				

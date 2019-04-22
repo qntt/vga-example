@@ -12,7 +12,7 @@ module skeleton(resetn,
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,															//	VGA Blue[9:0]
 	CLOCK_50,                                          // 50 MHz clock
-	up,down,left,right, reset, debug, isCollide1, randomNumOut);  
+	up,down,left,right, up2,down2,left2,right2, reset, debug, isCollide1, randomNumOut);  
 
 	wire [739 : 0] snake_data;
 
@@ -30,7 +30,7 @@ module skeleton(resetn,
 	output	[7:0]	VGA_G;	 				//	VGA Green[9:0]
 	output	[7:0]	VGA_B;   				//	VGA Blue[9:0]
 	input				CLOCK_50;
-	input up,down,left,right, reset;
+	input up,down,left,right, up2,down2,left2,right2, reset;
 
 	////////////////////////	PS2	////////////////////////////
 	input 			resetn;
@@ -127,6 +127,19 @@ module skeleton(resetn,
 		else if (left==1'b0 && move1 != 2) begin
 			move1 = 4;
 		end
+		
+		if (up2==1'b0 && move2 != 3) begin
+			move2 = 1;
+		end
+		else if (right2==1'b0 && move2 != 4) begin
+			move2 = 2;
+		end
+		else if (down2==1'b0 && move2 != 1) begin
+			move2 = 3;
+		end
+		else if (left2==1'b0 && move2 != 2) begin
+			move2 = 4;
+		end
 	end
 	
 	always@(posedge clock) begin
@@ -207,7 +220,7 @@ module skeleton(resetn,
         data_writeReg,
         data_readRegA,
         data_readRegB,
-		  move1, debug, randomNum
+		  move1, debug, randomNum, move2
     );
 	 
 	 
