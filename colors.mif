@@ -1,0 +1,117 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=24;
+DEPTH=93;
+
+ADDRESS_RADIX=DEC;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	0   :   14100F;
+	1   :   352C28;
+	2   :   2B2421;
+	3   :   E6E8E9;
+	4   :   292421;
+	5   :   362D2A;
+	6   :   82946F;
+	7   :   2A2522;
+	8   :   362652;
+	9   :   12100F;
+	10  :   6E7277;
+	11  :   311A58;
+	12  :   070505;
+	13  :   362655;
+	14  :   9BBD76;
+	15  :   2C2522;
+	16  :   9CBF78;
+	17  :   362355;
+	18  :   211B18;
+	19  :   9BBE77;
+	20  :   110D0C;
+	21  :   515459;
+	22  :   121010;
+	23  :   FFFEFF;
+	24  :   372750;
+	25  :   928F98;
+	26  :   382554;
+	27  :   392659;
+	28  :   92AE79;
+	29  :   372E2A;
+	30  :   9CBE78;
+	31  :   2D2420;
+	32  :   050303;
+	33  :   3A2556;
+	34  :   373643;
+	35  :   9CB882;
+	36  :   73855E;
+	37  :   221D1A;
+	38  :   140F0C;
+	39  :   4D4B5C;
+	40  :   9AC074;
+	41  :   080304;
+	42  :   342553;
+	43  :   9DB784;
+	44  :   090405;
+	45  :   110F0E;
+	46  :   0A0506;
+	47  :   9CBF75;
+	48  :   372651;
+	49  :   2B2520;
+	50  :   342555;
+	51  :   130F0E;
+	52  :   FFFFFF;
+	53  :   362453;
+	54  :   100E0D;
+	55  :   231C18;
+	56  :   E6EAEA;
+	57  :   120E0D;
+	58  :   120D0E;
+	59  :   362656;
+	60  :   140F10;
+	61  :   3D2E56;
+	62  :   070203;
+	63  :   392552;
+	64  :   352551;
+	65  :   100E0E;
+	66  :   130E0F;
+	67  :   352156;
+	68  :   372554;
+	69  :   382854;
+	70  :   000001;
+	71  :   070302;
+	72  :   1F1B1A;
+	73  :   382455;
+	74  :   1F1A17;
+	75  :   2C2621;
+	76  :   FDFEFB;
+	77  :   211C1B;
+	78  :   382D29;
+	79  :   080403;
+	80  :   382558;
+	81  :   352856;
+	82  :   EBEAEA;
+	83  :   332C29;
+	84  :   060404;
+	85  :   070504;
+	86  :   352153;
+	87  :   140F0E;
+	88  :   352457;
+	89  :   362D29;
+	90  :   090504;
+	91  :   0F5606;
+	92  :   FF0000;
+END;

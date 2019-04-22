@@ -40,12 +40,14 @@ integer counter;
 //input [31:0] score1, score2;
                    
 ///////// ////                     
-reg [18:0] ADDR;
+reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh;
+reg [15:0] ADDRlb;
 reg [23:0] bgr_data;
 wire VGA_CLK_n;
-wire [7:0] index;
+wire [7:0] index,index_main,index_highscore,index_head,index_body, index_apple,index_sl,index_lb,index_pnh;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
+integer cc,rr,ccc,rrr,crcr;
 ////
 
 
@@ -75,7 +77,46 @@ img_data	img_data_inst (
 	.clock ( VGA_CLK_n ),
 	.q ( index )
 	);
-	
+//	main_data	main_data_inst (
+//	.address ( ADDR ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_main )
+//	);
+//	highscore_data	highscore_data_inst (
+//	.address ( ADDR ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_highscore )
+//	);
+	head_data	head_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_head )
+	);
+	body_data	body_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_body )
+	);
+	apple_data	apple_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_apple )
+	);
+	lb	lb_data_inst (
+	.address ( ADDRlb ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_lb )
+	);	
+//	snakelogo_data	sl_data_inst (
+//	.address ( ADDRsl ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_sl )
+//	);	
+//	playandhigh_data	pnh_data_inst (
+//	.address ( ADDRpnh ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_pnh )
+//	);
 /////////////////////////
 //////Add switch-input logic here
 
@@ -106,10 +147,11 @@ end
 
 integer j;
 reg isInImage;
+integer lbaddr;
 
 integer head1position, head2position;
 integer currPosition;
-reg [1:0] currDirection;
+//reg [1:0] currDirection;
 
 integer heartsTimer;
 
@@ -144,16 +186,47 @@ begin
 	
 	// 3. loop through all directions to see if the current body part has a color
 	
+					addressRow = ADDR / 640;
+			addressCol = ADDR % 640; 
+
+//wheretheheadis = snake_data[2*(head1)+1 -:2];
+//						if (wheretheheadis == 2'b00) begin
+//							rr=addressCol % 12;
+//                     cc= 12 * (addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b01) begin
+//							cc=addressCol % 12;
+//                     rr= 12 * (addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b10) begin
+//							rr=addressCol % 12;
+//                     cc= 12 * (12-addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b11) begin
+//							cc= 12 - addressCol % 12;
+//                     rr= 12 * (addressRow % 12);
+//						end
+//
+//						crcr=cc+rr;
+//						ADDRHEAD=crcr;
+					ccc=addressCol % 12;
+                 rrr= 12 * (addressRow % 12);
+						ADDR144=ccc+rrr;
+								lbaddr=((addressRow-38)*250+addressCol-194)%34750;
+								ADDRlb=lbaddr;
+	
 	if (stage== 32'd0) begin
-		color_index = 8'd2;
+		color_index = 8'd0;
+		
+
 	end
 	
 	
 	if (stage == 32'd2) begin
 		//color_index = 8'd1;
 	
-			addressRow = ADDR / 640;
-			addressCol = ADDR % 640; 
+//			addressRow = ADDR / 640;
+//			addressCol = ADDR % 640; 
 			 
 			// check if ADDR is in the game screen (40x40 board)
 			if (addressCol < 480) begin
@@ -165,24 +238,26 @@ begin
 				
 				currPosition = head1position;
 				
-				if (currPosition == boardPosition) begin
-					color_index = 8'd1;
-					isInImage = 1'b1;
-				end
-				currDirection = snake_data[2*(head1)+1 -:2];
+
+//				currDirection = snake_data[2*(head1)+1 -:2];
 				
 				
 				if (isBoardPositionPresent == 1'b1) begin
-					color_index = 8'd1;
+					color_index = index_body;
+					isInImage = 1'b1;
+				end
+				
+				if (currPosition == boardPosition) begin
+					color_index = index_head;
 					isInImage = 1'b1;
 				end
 				
 				if (boardPosition == applePosition) begin
-					color_index = 8'd3;
+					color_index = index_apple;
 					isInImage = 1'b1;
 				end
 				if (isInImage == 1'b0) begin
-					color_index = 8'd4;
+					color_index = index;
 				end
 				
 				// TODO: display snake 2's positions
@@ -191,26 +266,32 @@ begin
 			end
 
 			// draw boundaries of board
-			else if (addressCol == 480) begin
-				color_index = 8'd0;
-			end
+//			else if (addressCol == 480) begin
+//				color_index = 8'd0;
+//			end
 			// area for drawing hearts timer
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
-					color_index = 8'd3;
+					color_index = 8'd92;
 				end
 				else begin
-					color_index = 8'd4;
+					color_index = index;
 				end
 			end
 			else begin
-				color_index = 8'd4;
+				color_index = index;
 			end
 		
 			
 	end
 	if (stage == 32'd3) begin 
-		color_index = 8'd3;
+		color_index = 8'd1;
+		if(addressRow>38&&addressRow<177&&addressCol>194&&addressCol<444)
+		begin
+
+		color_index=index_lb;
+		end
+		
 	end
 //		else begin
 //			color_index = 8'd4;

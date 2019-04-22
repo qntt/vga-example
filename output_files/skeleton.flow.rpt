@@ -1,5 +1,5 @@
 Flow report for skeleton
-Sun Apr 21 21:41:51 2019
+Mon Apr 22 01:24:14 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 21 21:41:51 2019       ;
+; Flow Status                        ; Successful - Mon Apr 22 01:24:14 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,594 / 114,480 ( 5 % )                     ;
-;     Total combinational functions  ; 5,339 / 114,480 ( 5 % )                     ;
-;     Dedicated logic registers      ; 2,222 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2222                                        ;
+; Total logic elements               ; 7,231 / 114,480 ( 6 % )                     ;
+;     Total combinational functions  ; 6,950 / 114,480 ( 6 % )                     ;
+;     Dedicated logic registers      ; 2,262 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2262                                        ;
 ; Total pins                         ; 224 / 529 ( 42 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 262,336 / 3,981,312 ( 7 % )                 ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total memory bits                  ; 2,661,050 / 3,981,312 ( 67 % )              ;
+; Embedded Multiplier 9-bit elements ; 3 / 532 ( < 1 % )                           ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/21/2019 21:40:20 ;
+; Start date & time ; 04/22/2019 01:21:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; skeleton            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 154946507232470.155589722012208        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 154946507232565.155591051013012        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; proc_tb        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; proc_tb                                ; --            ; --          ; eda_simulation ;
@@ -110,12 +110,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 4926 MB             ; 00:00:43                           ;
-; Fitter                    ; 00:00:41     ; 1.1                     ; 5852 MB             ; 00:01:10                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4727 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.4                     ; 4956 MB             ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4700 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:26     ; --                      ; --                  ; 00:02:05                           ;
+; Analysis & Synthesis      ; 00:00:47     ; 1.0                     ; 4964 MB             ; 00:00:58                           ;
+; Fitter                    ; 00:00:59     ; 1.1                     ; 5789 MB             ; 00:01:45                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4757 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:23     ; 1.8                     ; 5143 MB             ; 00:00:24                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4732 MB             ; 00:00:02                           ;
+; Total                     ; 00:02:16     ; --                      ; --                  ; 00:03:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,11 +124,11 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; 202a-pc10        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; 202a-pc10        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; 202a-pc10        ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; 202a-pc10        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; 202a-pc10        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; 202a-pc07        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; 202a-pc07        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; 202a-pc07        ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; 202a-pc07        ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; 202a-pc07        ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
