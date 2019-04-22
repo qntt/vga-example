@@ -1,0 +1,191 @@
+Dedicated registers
+
+# s0: stage number
+# s1: snake 1 head pointer
+# s2: snake 2 head pointer
+# s5: direction player 1
+# s6: direction player 2
+# s7: collision is true
+
+
+====================================================================================
+Store direction of snakes (up: 00, right: 01, down: 10, left: 11)
+
+snake1
+0...49
+
+snake2
+50...99
+
+==========================================
+Send to VGA controller
+
+head1 position (reg 1)
+100
+
+head2 position (reg 2)
+101
+
+length1 (reg 3)
+102
+
+length2 (reg 4)
+103
+
+stage (reg 5)
+104
+
+head1 pointer (reg 6)
+105
+
+head2 pointer (reg 7)
+106
+
+apple (reg 8)
+107
+
+hearts timer 1 (reg 9)
+108
+
+hearts timer 2 (reg 10)
+109
+
+snake 1 position
+110...119
+
+snake 2 position
+120...129
+
+isDrawing (reg 29)
+
+=======================================
+Snake arrays
+
+snake1 array rows
+1600...1649
+
+snake1 array cols
+1650...1699
+
+snake2 array rows
+1700...1749
+
+snake2 array cols
+1750...1799
+
+=======================================
+Apple(s) (changed from row and col to just position)
+(changing back to row and col)
+
+Apples position 
+1800
+
+Apples row
+1810
+
+Apple Col
+1811
+
+=======================================
+Score
+
+snake1
+1820
+
+snake2
+1821
+
+=======================================
+Length
+
+snake1
+1822
+
+snake2
+1823
+
+=======================================
+Other (currently not used)
+
+s0: stage number
+1824
+
+s1: snake 1 head pointer
+1825
+
+s2: snake 2 head pointer
+1826
+
+isDrawing
+1830
+
+==========================================
+Outputs of processor to dmem (currently not used)
+
+1840: isDrawing
+1841: stage
+1842: 
+
+==========================================
+Powerups:
+
+isDoubleSpeed (1 bit) - Player 1
+1850
+
+Double-speed Timer - Player 1
+1851
+
+isDoubleSpeed (1 bit) - Player 2
+1852
+
+Double-speed Timer - Player 2
+1853
+
+isInvinsible (1 bit) - Player 1
+1854
+
+Invincibility timer - Player 1
+1855
+
+isInvinsible (1 bit) - Player 2
+1856
+
+Invincibility timer - Player 2
+1857
+
+
+Hearts timer - Player 1
+1858
+
+Hearts timer - Player 2
+1859
+
+invincibility position
+1860
+
+invincibility counter
+1861
+
+
+==========================================
+Store the board position of every snake body part
+
+snake1
+2000...2049
+
+snake2
+2050...2099
+
+==========================================
+Board (currently not using but can be used for collision detection)
+
+board
+2100...3699
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Other notes
+
+loadSnake $rs
+opcode: 01111
+$rs is the memory address to load into vga_controller
+0099 : 01111000000100000000000000000000; --   loadSnake $t0
