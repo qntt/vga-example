@@ -27,8 +27,8 @@ loop:
 
   #### BEGIN DRAWING ON VGA
   # save head positions
-  lw $t1, 2000($s1)
-  lw $t2, 2050($s2)
+  lw $t1, 110($s1)
+  lw $t2, 120($s2)
   sw $t1, 100($0)
   sw $t2, 101($0)
 
@@ -69,8 +69,8 @@ loop:
     j loop
 
 displaySnake:
-  addi $t0, $0, 0
-  addi $t1, $0, 108
+  addi $t0, $0, 100
+  addi $t1, $0, 129
 
   displayLoop:
   
@@ -109,11 +109,11 @@ init:
 
   # initialize the board position of snake parts
   addi $t0, $0, 820
-  sw $t0, 2002($0)
+  sw $t0, 112($0)
   addi $t0, $0, 821
-  sw $t0, 2001($0)
+  sw $t0, 111($0)
   addi $t0, $0, 822
-  sw $t0, 2000($0)
+  sw $t0, 110($0)
 
   # initialize direction of each snake part
   addi $t0, $0, 3
@@ -142,6 +142,11 @@ init:
   addi $t2, $0, 3
   sw $t2, 2525($0)
 
+  addi $t0, $0, 10
+  addi $t1, $0, 25
+  sw $t0, 1810($0)
+  sw $t1, 1811($0)
+
   # set stage to 2
   addi $s0, $0, 2
 
@@ -166,7 +171,6 @@ decrementCounters:
 
 	jr $ra
 
-
 moveSnake:
   # length of snake 1 (t1)
   lw $t1, 1822($0)
@@ -175,11 +179,11 @@ moveSnake:
   addi $t0, $0, 1
   sub $t2, $t2, $t0             # tail1 = tail1 - 1
   
-  # tail may wrap over array (update if tail1 >= 50) (t2)
-  addi $t0, $0, 50
+  # tail may wrap over array (update if tail1 >= 10) (t2)
+  addi $t0, $0, 10
   blt $t2, $t0, skipUpdateTail1
-  addi $t0, $0, 50
-  sub $t2, $t2, $t0             # tail1 = tail1 - 50
+  addi $t0, $0, 10
+  sub $t2, $t2, $t0             # tail1 = tail1 - 10
 
   skipUpdateTail1:
 
@@ -187,7 +191,7 @@ moveSnake:
   add $t3, $0, $s1
 
   bne $s1, $0, head1NotZero         # if (head1==0) head1 = 49;
-  addi $s1, $0, 49
+  addi $s1, $0, 9
   j afterUpdateHead1
 
   head1NotZero:                 # else head1 = head1 - 1;
@@ -197,8 +201,10 @@ moveSnake:
   afterUpdateHead1:
 
   # change board at tail position
-  lw $t4, 2000($t2)   # board position of snake1
+  lw $t4, 110($t2)   # board position of snake1
   sw $0, 2100($t4)     # board[snake1[tail1]] = 0;
+  addi $t4, $0, 1601    # set to 1601 (reset the tail)
+  sw $t4, 110($t2)
 
 
   # move1 == 1?
@@ -217,9 +223,9 @@ moveSnake:
 
   # board position changes by -40
   addi $t5, $0, 40
-  lw $t6, 2000($t3)
+  lw $t6, 110($t3)
   sub $t7, $t6, $t5
-  sw $t7, 2000($s1)
+  sw $t7, 110($s1)
 
   # direction[head1] = 2
   addi $t0, $0, 2
@@ -250,9 +256,9 @@ moveSnake:
 
   # board position changes by 1
   addi $t5, $0, 1
-  lw $t6, 2000($t3)
+  lw $t6, 110($t3)
   add $t7, $t6, $t5
-  sw $t7, 2000($s1)
+  sw $t7, 110($s1)
 
   # direction[head1] = 3
   addi $t0, $0, 3
@@ -284,9 +290,9 @@ moveSnake:
 
   # board position changes by +40
   addi $t5, $0, 40
-  lw $t6, 2000($t3)
+  lw $t6, 110($t3)
   add $t7, $t6, $t5
-  sw $t7, 2000($s1)
+  sw $t7, 110($s1)
 
   # direction[head1] = 0
   addi $t0, $0, 0
@@ -318,9 +324,9 @@ moveSnake:
 
   # board position changes by -1
   addi $t5, $0, 1
-  lw $t6, 2000($t3)
+  lw $t6, 110($t3)
   sub $t7, $t6, $t5
-  sw $t7, 2000($s1)
+  sw $t7, 110($s1)
 
   # direction[head1] = 1
   addi $t0, $0, 1
@@ -343,7 +349,7 @@ checkAppleCollision:
   #    if (snake1[head1] == applePosition) {
   #      length1 = length1 + 1;
   #    }
-  lw $t0, 2000($s1)		# snake1[head1]
+  lw $t0, 110($s1)		# snake1[head1]
   lw $t1, 1800($0)		# apple position
   bne $t0, $t1, noEatApple
   lw $t1, 1822($0)		# length of snake 1 (t1)
@@ -372,6 +378,18 @@ checkAppleCollision:
   addi $t2, $0, 3
   sw $t2, 2100($t0)
 
+  # save row and col of apple ($t0 is the random apple position)
+  # mod(a/n) = a - (n * int(a/n))
+  addi $t1, $0, 40
+  div $t2, $t0, $t1     # row = a/n
+  mul $t3, $t1, $t2     # n * int(a/n)
+  sub $t4, $t0, $t3     # a - (n * int(a/n))
+
+  # $t2 is row, $t4 is col
+  sw $t2, 1810($0)
+  sw $t4, 1811($0)
+
+
   # reset the hearts counter
   addi $t0, $0, 100
   sw $t0, 1858($0)
@@ -398,7 +416,7 @@ checkCollisions:
   # at this point means isCollide=0, need to check for self-collisions
 
 	checkSelfCollision:
-  lw $t0, 2000($s1)		# snake1[head1]
+  lw $t0, 110($s1)		# snake1[head1]
   lw $t1, 2100($t0)		# boardValue
 
   addi $t0, $0, 1
@@ -420,7 +438,7 @@ checkCollisions:
   # at this point means snake1 is not colliding with snake2 and no self-collisions
   # set board value at this point to 1
   addi $t0, $0, 1
-  lw $t1, 2000($s1)
+  lw $t1, 110($s1)
   sw $t0, 2100($t1)
 
   endCheckSelfCollision:

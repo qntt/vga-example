@@ -3,22 +3,23 @@ module snake_register (value_in, index, clock, reset, enable, value_out);
 input [31:0] value_in, index;
 input clock, reset, enable;
 
-output [487:0] value_out;
+output [739:0] value_out;
 
 genvar i;
 
-generate
-	for (i=0; i<=99; i=i+1) begin: loop1
-		register_2 snake_2_bit_reg (
-			 .data_out(value_out[2*i+1 : 2*i]),
-			 .clock(clock),
-			 .ctrl_writeEnable((index == i) && enable),
-			 .ctrl_reset(reset),
-			 .data_in(value_in[1:0])
-		);
-	end
-endgenerate
+//generate
+//	for (i=0; i<=99; i=i+1) begin: loop1
+//		register_2 snake_2_bit_reg (
+//			 .data_out(value_out[2*i+1 : 2*i]),
+//			 .clock(clock),
+//			 .ctrl_writeEnable((index == i) && enable),
+//			 .ctrl_reset(reset),
+//			 .data_in(value_in[1:0])
+//		);
+//	end
+//endgenerate
 
+assign value_out[199:0] = 200'b0;
 
 
 register snake_reg_head1position (
@@ -92,6 +93,27 @@ register snake_reg_heartsTimer (
 	 .ctrl_reset(reset),
 	 .data_in(value_in)
 );
+
+register snake_reg_heartsTimer2 (
+	 .data_out(value_out[519:488]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 108) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+
+generate
+	for (i=110; i<=129; i=i+1) begin: loop1
+		register_11 snakePosition_reg1 (
+			 .data_out(value_out[11*(i-110+1)-1 + 520 : 11*(i-110)+520]),
+			 .clock(clock),
+			 .ctrl_writeEnable((index == i) && enable),
+			 .ctrl_reset(reset),
+			 .data_in(value_in[10:0])
+		);
+	end
+endgenerate
 
 
 

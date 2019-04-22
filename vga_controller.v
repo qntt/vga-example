@@ -16,7 +16,7 @@ module vga_controller(iRST_n,
 							 //isDrawing);
 
 
-input [487 : 0] snake_data;							
+input [739 : 0] snake_data;							
 							
 input iRST_n;
 input iVGA_CLK;
@@ -113,6 +113,12 @@ reg [1:0] currDirection;
 
 integer heartsTimer;
 
+wire isBoardPositionPresent;
+
+
+// for snake 1 [110...119]
+TargetFindModule tf_module1 (.values(snake_data[629:520]), .target(boardPosition[10:0]), .isTargetPresent(isBoardPositionPresent));
+
 // process snake's movement
 always@(posedge iVGA_CLK)
 begin
@@ -166,30 +172,9 @@ begin
 				currDirection = snake_data[2*(head1)+1 -:2];
 				
 				
-				for (j=1; j<50; j=j+1) begin
-					if (j <= length1) begin 
-					
-						if (currDirection == 2'b00) begin
-							currPosition = currPosition - 40;
-						end
-						else if (currDirection == 2'b01) begin
-							currPosition = currPosition + 1;
-						end
-						else if (currDirection == 2'b10) begin
-							currPosition = currPosition + 40;
-						end
-						else if (currDirection == 2'b11) begin
-							currPosition = currPosition - 1;
-						end
-					
-						currDirection = snake_data[2*(head1+j)+1 -: 2];
-					
-						
-						if (currPosition == boardPosition) begin
-							color_index = 8'd1;
-							isInImage = 1'b1;
-						end
-					end
+				if (isBoardPositionPresent == 1'b1) begin
+					color_index = 8'd1;
+					isInImage = 1'b1;
 				end
 				
 				if (boardPosition == applePosition) begin
@@ -268,7 +253,41 @@ endmodule
  	
 
 
+module TargetFindModule (values, target, isTargetPresent);
 
+	// checks if at least one value in values equal the target
+
+	input [11*(9+1)-1 : 0] values;
+	input [10:0] target;
+	
+	wire [11:0] isEqual;
+	
+	output isTargetPresent;
+	
+	genvar i;
+	generate
+	for (i=0; i<=9; i=i+1) begin: loop1
+		equality eq1 (.out(isEqual[i]), .a(target), .b(values[11*(i+1)-1: 11*i]));
+	end
+	endgenerate
+	
+	assign isTargetPresent = ~(isEqual == 11'b0);
+	
+//	assign isEqual[11] = 1'b0;
+//	equality out_equal (.out(isTargetPresent), .a(isEqual), .b(11'b0));
+
+endmodule 
+
+
+module equality (out, a, b);
+
+	input [10:0] a, b;
+	output out;
+	
+	assign out = ~(a[0]^b[0] || a[1]^b[1] || a[2]^b[2] || a[3]^b[3] || a[4]^b[4] || 
+						a[5]^b[5] || a[6]^b[6] || a[7]^b[7] || a[8]^b[8] || a[9]^b[9] || a[10]^b[10]);
+
+endmodule 
 
 
 
