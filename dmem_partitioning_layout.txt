@@ -56,7 +56,29 @@ snake 1 position
 snake 2 position
 120...129
 
-isDrawing (reg 29)
+invincibility timer 1
+130
+
+invincibility timer 2
+131
+
+invincibility position
+132
+
+score 1
+133
+
+score 2
+134
+
+high score 1
+135
+
+high score 2
+136
+
+high score 3
+137
 
 =======================================
 Snake arrays
@@ -170,6 +192,8 @@ invincibility counter
 ==========================================
 Store the board position of every snake body part
 
+(currently not using)
+
 snake1
 2000...2049
 
@@ -181,6 +205,13 @@ Board (currently not using but can be used for collision detection)
 
 board
 2100...3699
+
+==========================================
+High Score
+
+4001
+4002
+4003
 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Other notes

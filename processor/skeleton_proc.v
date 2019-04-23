@@ -62,21 +62,10 @@ module skeleton_proc(clock, reset, stage, head1Position, head1);
 	 
 	 initial begin
 		move1 = 2;
-		counter = 0;
-		loadSeed = 1'b1;
 	end
 	
-	always@(posedge VGA_CLK) begin
-	
-		if (counter == 1) begin
-			loadSeed = 1'b0;
-		end
-		counter = counter + 1;
-	
-	end
 	 
-	 rng rng1(.clk(VGA_CLK), .reset(1'b1), .loadseed_i(loadSeed), .rngOut(randomNum[11:0]));
-	 assign randomNum[31:12] = 20'b0;
+	 linear_rng lr1 (.clock(clock), .initialSeed(32'b0), .random(randomNum));
 
     regfile my_regfile(
         clock,

@@ -16,7 +16,7 @@ module vga_controller(iRST_n,
 							 //isDrawing);
 
 
-input [739 : 0] snake_data;							
+input [995 : 0] snake_data;							
 							
 input iRST_n;
 input iVGA_CLK;
@@ -92,6 +92,7 @@ integer boardRow, boardCol;
  integer move1;
 
 integer applePosition;
+integer invincibilityTimer1, invincibilityTimer2, invincibilityPosition, score1, score2;
  
 reg [7:0] color_index;
 
@@ -144,6 +145,13 @@ begin
 	
 	heartsTimer = snake_data[487:456];
 	
+	invincibilityTimer1 = snake_data[771:740];
+	invincibilityTimer2 = snake_data[803:772];
+	invincibilityPosition = snake_data[835:804];
+	
+	score1 = snake_data[867:836];
+	score2 = snake_data[899:868];
+	
 	// 3. loop through all directions to see if the current body part has a color
 	
 	if (stage== 32'd0) begin
@@ -192,11 +200,16 @@ begin
 					color_index = 8'd3;
 					isInImage = 1'b1;
 				end
+				
+				if (boardPosition == invincibilityPosition) begin
+					color_index = 8'd0;
+					isInImage = 1'b1;
+				end
+				
 				if (isInImage == 1'b0) begin
 					color_index = 8'd4;
 				end
 				
-				// TODO: display snake 2's positions
 				
 				
 			end
@@ -209,6 +222,15 @@ begin
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
 					color_index = 8'd3;
+				end
+				else begin
+					color_index = 8'd4;
+				end
+			end
+			// area for drawing invincibility timer
+			else if (addressRow > 100 && addressRow < 120 && addressCol > 520 && addressCol < 600) begin
+				if (addressCol*100 < (600-520)*invincibilityTimer1 + 520*100) begin
+					color_index = 8'd0;
 				end
 				else begin
 					color_index = 8'd4;

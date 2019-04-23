@@ -2826,100 +2826,100 @@ snake_data[326] => ~NO_FANOUT~
 snake_data[327] => ~NO_FANOUT~
 snake_data[328] => Equal0.IN31
 snake_data[328] => Equal1.IN30
-snake_data[328] => Equal6.IN31
+snake_data[328] => Equal7.IN31
 snake_data[329] => Equal0.IN30
 snake_data[329] => Equal1.IN31
-snake_data[329] => Equal6.IN30
+snake_data[329] => Equal7.IN30
 snake_data[330] => Equal0.IN29
 snake_data[330] => Equal1.IN29
-snake_data[330] => Equal6.IN29
+snake_data[330] => Equal7.IN29
 snake_data[331] => Equal0.IN28
 snake_data[331] => Equal1.IN28
-snake_data[331] => Equal6.IN28
+snake_data[331] => Equal7.IN28
 snake_data[332] => Equal0.IN27
 snake_data[332] => Equal1.IN27
-snake_data[332] => Equal6.IN27
+snake_data[332] => Equal7.IN27
 snake_data[333] => Equal0.IN26
 snake_data[333] => Equal1.IN26
-snake_data[333] => Equal6.IN26
+snake_data[333] => Equal7.IN26
 snake_data[334] => Equal0.IN25
 snake_data[334] => Equal1.IN25
-snake_data[334] => Equal6.IN25
+snake_data[334] => Equal7.IN25
 snake_data[335] => Equal0.IN24
 snake_data[335] => Equal1.IN24
-snake_data[335] => Equal6.IN24
+snake_data[335] => Equal7.IN24
 snake_data[336] => Equal0.IN23
 snake_data[336] => Equal1.IN23
-snake_data[336] => Equal6.IN23
+snake_data[336] => Equal7.IN23
 snake_data[337] => Equal0.IN22
 snake_data[337] => Equal1.IN22
-snake_data[337] => Equal6.IN22
+snake_data[337] => Equal7.IN22
 snake_data[338] => Equal0.IN21
 snake_data[338] => Equal1.IN21
-snake_data[338] => Equal6.IN21
+snake_data[338] => Equal7.IN21
 snake_data[339] => Equal0.IN20
 snake_data[339] => Equal1.IN20
-snake_data[339] => Equal6.IN20
+snake_data[339] => Equal7.IN20
 snake_data[340] => Equal0.IN19
 snake_data[340] => Equal1.IN19
-snake_data[340] => Equal6.IN19
+snake_data[340] => Equal7.IN19
 snake_data[341] => Equal0.IN18
 snake_data[341] => Equal1.IN18
-snake_data[341] => Equal6.IN18
+snake_data[341] => Equal7.IN18
 snake_data[342] => Equal0.IN17
 snake_data[342] => Equal1.IN17
-snake_data[342] => Equal6.IN17
+snake_data[342] => Equal7.IN17
 snake_data[343] => Equal0.IN16
 snake_data[343] => Equal1.IN16
-snake_data[343] => Equal6.IN16
+snake_data[343] => Equal7.IN16
 snake_data[344] => Equal0.IN15
 snake_data[344] => Equal1.IN15
-snake_data[344] => Equal6.IN15
+snake_data[344] => Equal7.IN15
 snake_data[345] => Equal0.IN14
 snake_data[345] => Equal1.IN14
-snake_data[345] => Equal6.IN14
+snake_data[345] => Equal7.IN14
 snake_data[346] => Equal0.IN13
 snake_data[346] => Equal1.IN13
-snake_data[346] => Equal6.IN13
+snake_data[346] => Equal7.IN13
 snake_data[347] => Equal0.IN12
 snake_data[347] => Equal1.IN12
-snake_data[347] => Equal6.IN12
+snake_data[347] => Equal7.IN12
 snake_data[348] => Equal0.IN11
 snake_data[348] => Equal1.IN11
-snake_data[348] => Equal6.IN11
+snake_data[348] => Equal7.IN11
 snake_data[349] => Equal0.IN10
 snake_data[349] => Equal1.IN10
-snake_data[349] => Equal6.IN10
+snake_data[349] => Equal7.IN10
 snake_data[350] => Equal0.IN9
 snake_data[350] => Equal1.IN9
-snake_data[350] => Equal6.IN9
+snake_data[350] => Equal7.IN9
 snake_data[351] => Equal0.IN8
 snake_data[351] => Equal1.IN8
-snake_data[351] => Equal6.IN8
+snake_data[351] => Equal7.IN8
 snake_data[352] => Equal0.IN7
 snake_data[352] => Equal1.IN7
-snake_data[352] => Equal6.IN7
+snake_data[352] => Equal7.IN7
 snake_data[353] => Equal0.IN6
 snake_data[353] => Equal1.IN6
-snake_data[353] => Equal6.IN6
+snake_data[353] => Equal7.IN6
 snake_data[354] => Equal0.IN5
 snake_data[354] => Equal1.IN5
-snake_data[354] => Equal6.IN5
+snake_data[354] => Equal7.IN5
 snake_data[355] => Equal0.IN4
 snake_data[355] => Equal1.IN4
-snake_data[355] => Equal6.IN4
+snake_data[355] => Equal7.IN4
 snake_data[356] => Equal0.IN3
 snake_data[356] => Equal1.IN3
-snake_data[356] => Equal6.IN3
+snake_data[356] => Equal7.IN3
 snake_data[357] => Equal0.IN2
 snake_data[357] => Equal1.IN2
-snake_data[357] => Equal6.IN2
+snake_data[357] => Equal7.IN2
 snake_data[358] => Equal0.IN1
 snake_data[358] => Equal1.IN1
-snake_data[358] => Equal6.IN1
+snake_data[358] => Equal7.IN1
 snake_data[359] => Equal0.IN0
 snake_data[359] => Equal1.IN0
-snake_data[359] => Equal6.IN0
+snake_data[359] => Equal7.IN0
 snake_data[360] => ~NO_FANOUT~
 snake_data[361] => ~NO_FANOUT~
 snake_data[362] => ~NO_FANOUT~
@@ -3017,7 +3017,7 @@ snake_data[453] => Equal4.IN34
 snake_data[454] => Equal4.IN33
 snake_data[455] => Equal4.IN32
 snake_data[456] => Add3.IN62
-snake_data[456] => LessThan5.IN64
+snake_data[456] => LessThan3.IN64
 snake_data[457] => Add3.IN61
 snake_data[457] => Add4.IN54
 snake_data[458] => Add3.IN59
@@ -3332,6 +3332,198 @@ snake_data[736] => snake_data[736].IN1
 snake_data[737] => snake_data[737].IN1
 snake_data[738] => snake_data[738].IN1
 snake_data[739] => snake_data[739].IN1
+snake_data[740] => Add5.IN62
+snake_data[740] => LessThan8.IN64
+snake_data[741] => Add5.IN61
+snake_data[741] => Add6.IN54
+snake_data[742] => Add5.IN59
+snake_data[742] => Add5.IN60
+snake_data[743] => Add5.IN57
+snake_data[743] => Add5.IN58
+snake_data[744] => Add5.IN55
+snake_data[744] => Add5.IN56
+snake_data[745] => Add5.IN53
+snake_data[745] => Add5.IN54
+snake_data[746] => Add5.IN51
+snake_data[746] => Add5.IN52
+snake_data[747] => Add5.IN49
+snake_data[747] => Add5.IN50
+snake_data[748] => Add5.IN47
+snake_data[748] => Add5.IN48
+snake_data[749] => Add5.IN45
+snake_data[749] => Add5.IN46
+snake_data[750] => Add5.IN43
+snake_data[750] => Add5.IN44
+snake_data[751] => Add5.IN41
+snake_data[751] => Add5.IN42
+snake_data[752] => Add5.IN39
+snake_data[752] => Add5.IN40
+snake_data[753] => Add5.IN37
+snake_data[753] => Add5.IN38
+snake_data[754] => Add5.IN35
+snake_data[754] => Add5.IN36
+snake_data[755] => Add5.IN33
+snake_data[755] => Add5.IN34
+snake_data[756] => Add5.IN31
+snake_data[756] => Add5.IN32
+snake_data[757] => Add5.IN29
+snake_data[757] => Add5.IN30
+snake_data[758] => Add5.IN27
+snake_data[758] => Add5.IN28
+snake_data[759] => Add5.IN25
+snake_data[759] => Add5.IN26
+snake_data[760] => Add5.IN23
+snake_data[760] => Add5.IN24
+snake_data[761] => Add5.IN21
+snake_data[761] => Add5.IN22
+snake_data[762] => Add5.IN19
+snake_data[762] => Add5.IN20
+snake_data[763] => Add5.IN17
+snake_data[763] => Add5.IN18
+snake_data[764] => Add5.IN15
+snake_data[764] => Add5.IN16
+snake_data[765] => Add5.IN13
+snake_data[765] => Add5.IN14
+snake_data[766] => Add5.IN11
+snake_data[766] => Add5.IN12
+snake_data[767] => Add5.IN9
+snake_data[767] => Add5.IN10
+snake_data[768] => Add5.IN7
+snake_data[768] => Add5.IN8
+snake_data[769] => Add5.IN5
+snake_data[769] => Add5.IN6
+snake_data[770] => Add5.IN3
+snake_data[770] => Add5.IN4
+snake_data[771] => Add5.IN1
+snake_data[771] => Add5.IN2
+snake_data[772] => ~NO_FANOUT~
+snake_data[773] => ~NO_FANOUT~
+snake_data[774] => ~NO_FANOUT~
+snake_data[775] => ~NO_FANOUT~
+snake_data[776] => ~NO_FANOUT~
+snake_data[777] => ~NO_FANOUT~
+snake_data[778] => ~NO_FANOUT~
+snake_data[779] => ~NO_FANOUT~
+snake_data[780] => ~NO_FANOUT~
+snake_data[781] => ~NO_FANOUT~
+snake_data[782] => ~NO_FANOUT~
+snake_data[783] => ~NO_FANOUT~
+snake_data[784] => ~NO_FANOUT~
+snake_data[785] => ~NO_FANOUT~
+snake_data[786] => ~NO_FANOUT~
+snake_data[787] => ~NO_FANOUT~
+snake_data[788] => ~NO_FANOUT~
+snake_data[789] => ~NO_FANOUT~
+snake_data[790] => ~NO_FANOUT~
+snake_data[791] => ~NO_FANOUT~
+snake_data[792] => ~NO_FANOUT~
+snake_data[793] => ~NO_FANOUT~
+snake_data[794] => ~NO_FANOUT~
+snake_data[795] => ~NO_FANOUT~
+snake_data[796] => ~NO_FANOUT~
+snake_data[797] => ~NO_FANOUT~
+snake_data[798] => ~NO_FANOUT~
+snake_data[799] => ~NO_FANOUT~
+snake_data[800] => ~NO_FANOUT~
+snake_data[801] => ~NO_FANOUT~
+snake_data[802] => ~NO_FANOUT~
+snake_data[803] => ~NO_FANOUT~
+snake_data[804] => Equal5.IN63
+snake_data[805] => Equal5.IN62
+snake_data[806] => Equal5.IN61
+snake_data[807] => Equal5.IN60
+snake_data[808] => Equal5.IN59
+snake_data[809] => Equal5.IN58
+snake_data[810] => Equal5.IN57
+snake_data[811] => Equal5.IN56
+snake_data[812] => Equal5.IN55
+snake_data[813] => Equal5.IN54
+snake_data[814] => Equal5.IN53
+snake_data[815] => Equal5.IN52
+snake_data[816] => Equal5.IN51
+snake_data[817] => Equal5.IN50
+snake_data[818] => Equal5.IN49
+snake_data[819] => Equal5.IN48
+snake_data[820] => Equal5.IN47
+snake_data[821] => Equal5.IN46
+snake_data[822] => Equal5.IN45
+snake_data[823] => Equal5.IN44
+snake_data[824] => Equal5.IN43
+snake_data[825] => Equal5.IN42
+snake_data[826] => Equal5.IN41
+snake_data[827] => Equal5.IN40
+snake_data[828] => Equal5.IN39
+snake_data[829] => Equal5.IN38
+snake_data[830] => Equal5.IN37
+snake_data[831] => Equal5.IN36
+snake_data[832] => Equal5.IN35
+snake_data[833] => Equal5.IN34
+snake_data[834] => Equal5.IN33
+snake_data[835] => Equal5.IN32
+snake_data[836] => ~NO_FANOUT~
+snake_data[837] => ~NO_FANOUT~
+snake_data[838] => ~NO_FANOUT~
+snake_data[839] => ~NO_FANOUT~
+snake_data[840] => ~NO_FANOUT~
+snake_data[841] => ~NO_FANOUT~
+snake_data[842] => ~NO_FANOUT~
+snake_data[843] => ~NO_FANOUT~
+snake_data[844] => ~NO_FANOUT~
+snake_data[845] => ~NO_FANOUT~
+snake_data[846] => ~NO_FANOUT~
+snake_data[847] => ~NO_FANOUT~
+snake_data[848] => ~NO_FANOUT~
+snake_data[849] => ~NO_FANOUT~
+snake_data[850] => ~NO_FANOUT~
+snake_data[851] => ~NO_FANOUT~
+snake_data[852] => ~NO_FANOUT~
+snake_data[853] => ~NO_FANOUT~
+snake_data[854] => ~NO_FANOUT~
+snake_data[855] => ~NO_FANOUT~
+snake_data[856] => ~NO_FANOUT~
+snake_data[857] => ~NO_FANOUT~
+snake_data[858] => ~NO_FANOUT~
+snake_data[859] => ~NO_FANOUT~
+snake_data[860] => ~NO_FANOUT~
+snake_data[861] => ~NO_FANOUT~
+snake_data[862] => ~NO_FANOUT~
+snake_data[863] => ~NO_FANOUT~
+snake_data[864] => ~NO_FANOUT~
+snake_data[865] => ~NO_FANOUT~
+snake_data[866] => ~NO_FANOUT~
+snake_data[867] => ~NO_FANOUT~
+snake_data[868] => ~NO_FANOUT~
+snake_data[869] => ~NO_FANOUT~
+snake_data[870] => ~NO_FANOUT~
+snake_data[871] => ~NO_FANOUT~
+snake_data[872] => ~NO_FANOUT~
+snake_data[873] => ~NO_FANOUT~
+snake_data[874] => ~NO_FANOUT~
+snake_data[875] => ~NO_FANOUT~
+snake_data[876] => ~NO_FANOUT~
+snake_data[877] => ~NO_FANOUT~
+snake_data[878] => ~NO_FANOUT~
+snake_data[879] => ~NO_FANOUT~
+snake_data[880] => ~NO_FANOUT~
+snake_data[881] => ~NO_FANOUT~
+snake_data[882] => ~NO_FANOUT~
+snake_data[883] => ~NO_FANOUT~
+snake_data[884] => ~NO_FANOUT~
+snake_data[885] => ~NO_FANOUT~
+snake_data[886] => ~NO_FANOUT~
+snake_data[887] => ~NO_FANOUT~
+snake_data[888] => ~NO_FANOUT~
+snake_data[889] => ~NO_FANOUT~
+snake_data[890] => ~NO_FANOUT~
+snake_data[891] => ~NO_FANOUT~
+snake_data[892] => ~NO_FANOUT~
+snake_data[893] => ~NO_FANOUT~
+snake_data[894] => ~NO_FANOUT~
+snake_data[895] => ~NO_FANOUT~
+snake_data[896] => ~NO_FANOUT~
+snake_data[897] => ~NO_FANOUT~
+snake_data[898] => ~NO_FANOUT~
+snake_data[899] => ~NO_FANOUT~
 
 
 |skeleton|vga_controller:vga_ins|video_sync_generator:LTM_ins
@@ -33694,6 +33886,166 @@ snake[736] <= snake_register:sr1.value_out
 snake[737] <= snake_register:sr1.value_out
 snake[738] <= snake_register:sr1.value_out
 snake[739] <= snake_register:sr1.value_out
+snake[740] <= snake_register:sr1.value_out
+snake[741] <= snake_register:sr1.value_out
+snake[742] <= snake_register:sr1.value_out
+snake[743] <= snake_register:sr1.value_out
+snake[744] <= snake_register:sr1.value_out
+snake[745] <= snake_register:sr1.value_out
+snake[746] <= snake_register:sr1.value_out
+snake[747] <= snake_register:sr1.value_out
+snake[748] <= snake_register:sr1.value_out
+snake[749] <= snake_register:sr1.value_out
+snake[750] <= snake_register:sr1.value_out
+snake[751] <= snake_register:sr1.value_out
+snake[752] <= snake_register:sr1.value_out
+snake[753] <= snake_register:sr1.value_out
+snake[754] <= snake_register:sr1.value_out
+snake[755] <= snake_register:sr1.value_out
+snake[756] <= snake_register:sr1.value_out
+snake[757] <= snake_register:sr1.value_out
+snake[758] <= snake_register:sr1.value_out
+snake[759] <= snake_register:sr1.value_out
+snake[760] <= snake_register:sr1.value_out
+snake[761] <= snake_register:sr1.value_out
+snake[762] <= snake_register:sr1.value_out
+snake[763] <= snake_register:sr1.value_out
+snake[764] <= snake_register:sr1.value_out
+snake[765] <= snake_register:sr1.value_out
+snake[766] <= snake_register:sr1.value_out
+snake[767] <= snake_register:sr1.value_out
+snake[768] <= snake_register:sr1.value_out
+snake[769] <= snake_register:sr1.value_out
+snake[770] <= snake_register:sr1.value_out
+snake[771] <= snake_register:sr1.value_out
+snake[772] <= snake_register:sr1.value_out
+snake[773] <= snake_register:sr1.value_out
+snake[774] <= snake_register:sr1.value_out
+snake[775] <= snake_register:sr1.value_out
+snake[776] <= snake_register:sr1.value_out
+snake[777] <= snake_register:sr1.value_out
+snake[778] <= snake_register:sr1.value_out
+snake[779] <= snake_register:sr1.value_out
+snake[780] <= snake_register:sr1.value_out
+snake[781] <= snake_register:sr1.value_out
+snake[782] <= snake_register:sr1.value_out
+snake[783] <= snake_register:sr1.value_out
+snake[784] <= snake_register:sr1.value_out
+snake[785] <= snake_register:sr1.value_out
+snake[786] <= snake_register:sr1.value_out
+snake[787] <= snake_register:sr1.value_out
+snake[788] <= snake_register:sr1.value_out
+snake[789] <= snake_register:sr1.value_out
+snake[790] <= snake_register:sr1.value_out
+snake[791] <= snake_register:sr1.value_out
+snake[792] <= snake_register:sr1.value_out
+snake[793] <= snake_register:sr1.value_out
+snake[794] <= snake_register:sr1.value_out
+snake[795] <= snake_register:sr1.value_out
+snake[796] <= snake_register:sr1.value_out
+snake[797] <= snake_register:sr1.value_out
+snake[798] <= snake_register:sr1.value_out
+snake[799] <= snake_register:sr1.value_out
+snake[800] <= snake_register:sr1.value_out
+snake[801] <= snake_register:sr1.value_out
+snake[802] <= snake_register:sr1.value_out
+snake[803] <= snake_register:sr1.value_out
+snake[804] <= snake_register:sr1.value_out
+snake[805] <= snake_register:sr1.value_out
+snake[806] <= snake_register:sr1.value_out
+snake[807] <= snake_register:sr1.value_out
+snake[808] <= snake_register:sr1.value_out
+snake[809] <= snake_register:sr1.value_out
+snake[810] <= snake_register:sr1.value_out
+snake[811] <= snake_register:sr1.value_out
+snake[812] <= snake_register:sr1.value_out
+snake[813] <= snake_register:sr1.value_out
+snake[814] <= snake_register:sr1.value_out
+snake[815] <= snake_register:sr1.value_out
+snake[816] <= snake_register:sr1.value_out
+snake[817] <= snake_register:sr1.value_out
+snake[818] <= snake_register:sr1.value_out
+snake[819] <= snake_register:sr1.value_out
+snake[820] <= snake_register:sr1.value_out
+snake[821] <= snake_register:sr1.value_out
+snake[822] <= snake_register:sr1.value_out
+snake[823] <= snake_register:sr1.value_out
+snake[824] <= snake_register:sr1.value_out
+snake[825] <= snake_register:sr1.value_out
+snake[826] <= snake_register:sr1.value_out
+snake[827] <= snake_register:sr1.value_out
+snake[828] <= snake_register:sr1.value_out
+snake[829] <= snake_register:sr1.value_out
+snake[830] <= snake_register:sr1.value_out
+snake[831] <= snake_register:sr1.value_out
+snake[832] <= snake_register:sr1.value_out
+snake[833] <= snake_register:sr1.value_out
+snake[834] <= snake_register:sr1.value_out
+snake[835] <= snake_register:sr1.value_out
+snake[836] <= snake_register:sr1.value_out
+snake[837] <= snake_register:sr1.value_out
+snake[838] <= snake_register:sr1.value_out
+snake[839] <= snake_register:sr1.value_out
+snake[840] <= snake_register:sr1.value_out
+snake[841] <= snake_register:sr1.value_out
+snake[842] <= snake_register:sr1.value_out
+snake[843] <= snake_register:sr1.value_out
+snake[844] <= snake_register:sr1.value_out
+snake[845] <= snake_register:sr1.value_out
+snake[846] <= snake_register:sr1.value_out
+snake[847] <= snake_register:sr1.value_out
+snake[848] <= snake_register:sr1.value_out
+snake[849] <= snake_register:sr1.value_out
+snake[850] <= snake_register:sr1.value_out
+snake[851] <= snake_register:sr1.value_out
+snake[852] <= snake_register:sr1.value_out
+snake[853] <= snake_register:sr1.value_out
+snake[854] <= snake_register:sr1.value_out
+snake[855] <= snake_register:sr1.value_out
+snake[856] <= snake_register:sr1.value_out
+snake[857] <= snake_register:sr1.value_out
+snake[858] <= snake_register:sr1.value_out
+snake[859] <= snake_register:sr1.value_out
+snake[860] <= snake_register:sr1.value_out
+snake[861] <= snake_register:sr1.value_out
+snake[862] <= snake_register:sr1.value_out
+snake[863] <= snake_register:sr1.value_out
+snake[864] <= snake_register:sr1.value_out
+snake[865] <= snake_register:sr1.value_out
+snake[866] <= snake_register:sr1.value_out
+snake[867] <= snake_register:sr1.value_out
+snake[868] <= snake_register:sr1.value_out
+snake[869] <= snake_register:sr1.value_out
+snake[870] <= snake_register:sr1.value_out
+snake[871] <= snake_register:sr1.value_out
+snake[872] <= snake_register:sr1.value_out
+snake[873] <= snake_register:sr1.value_out
+snake[874] <= snake_register:sr1.value_out
+snake[875] <= snake_register:sr1.value_out
+snake[876] <= snake_register:sr1.value_out
+snake[877] <= snake_register:sr1.value_out
+snake[878] <= snake_register:sr1.value_out
+snake[879] <= snake_register:sr1.value_out
+snake[880] <= snake_register:sr1.value_out
+snake[881] <= snake_register:sr1.value_out
+snake[882] <= snake_register:sr1.value_out
+snake[883] <= snake_register:sr1.value_out
+snake[884] <= snake_register:sr1.value_out
+snake[885] <= snake_register:sr1.value_out
+snake[886] <= snake_register:sr1.value_out
+snake[887] <= snake_register:sr1.value_out
+snake[888] <= snake_register:sr1.value_out
+snake[889] <= snake_register:sr1.value_out
+snake[890] <= snake_register:sr1.value_out
+snake[891] <= snake_register:sr1.value_out
+snake[892] <= snake_register:sr1.value_out
+snake[893] <= snake_register:sr1.value_out
+snake[894] <= snake_register:sr1.value_out
+snake[895] <= snake_register:sr1.value_out
+snake[896] <= snake_register:sr1.value_out
+snake[897] <= snake_register:sr1.value_out
+snake[898] <= snake_register:sr1.value_out
+snake[899] <= snake_register:sr1.value_out
 
 
 |skeleton|processor:my_processor|latch_fd:latch_fd1
@@ -86200,38 +86552,38 @@ b[4] => out.IN1
 
 
 |skeleton|processor:my_processor|snake_register:sr1
-value_in[0] => value_in[0].IN30
-value_in[1] => value_in[1].IN30
-value_in[2] => value_in[2].IN30
-value_in[3] => value_in[3].IN30
-value_in[4] => value_in[4].IN30
-value_in[5] => value_in[5].IN30
-value_in[6] => value_in[6].IN30
-value_in[7] => value_in[7].IN30
-value_in[8] => value_in[8].IN30
-value_in[9] => value_in[9].IN30
-value_in[10] => value_in[10].IN30
-value_in[11] => value_in[11].IN10
-value_in[12] => value_in[12].IN10
-value_in[13] => value_in[13].IN10
-value_in[14] => value_in[14].IN10
-value_in[15] => value_in[15].IN10
-value_in[16] => value_in[16].IN10
-value_in[17] => value_in[17].IN10
-value_in[18] => value_in[18].IN10
-value_in[19] => value_in[19].IN10
-value_in[20] => value_in[20].IN10
-value_in[21] => value_in[21].IN10
-value_in[22] => value_in[22].IN10
-value_in[23] => value_in[23].IN10
-value_in[24] => value_in[24].IN10
-value_in[25] => value_in[25].IN10
-value_in[26] => value_in[26].IN10
-value_in[27] => value_in[27].IN10
-value_in[28] => value_in[28].IN10
-value_in[29] => value_in[29].IN10
-value_in[30] => value_in[30].IN10
-value_in[31] => value_in[31].IN10
+value_in[0] => value_in[0].IN35
+value_in[1] => value_in[1].IN35
+value_in[2] => value_in[2].IN35
+value_in[3] => value_in[3].IN35
+value_in[4] => value_in[4].IN35
+value_in[5] => value_in[5].IN35
+value_in[6] => value_in[6].IN35
+value_in[7] => value_in[7].IN35
+value_in[8] => value_in[8].IN35
+value_in[9] => value_in[9].IN35
+value_in[10] => value_in[10].IN35
+value_in[11] => value_in[11].IN15
+value_in[12] => value_in[12].IN15
+value_in[13] => value_in[13].IN15
+value_in[14] => value_in[14].IN15
+value_in[15] => value_in[15].IN15
+value_in[16] => value_in[16].IN15
+value_in[17] => value_in[17].IN15
+value_in[18] => value_in[18].IN15
+value_in[19] => value_in[19].IN15
+value_in[20] => value_in[20].IN15
+value_in[21] => value_in[21].IN15
+value_in[22] => value_in[22].IN15
+value_in[23] => value_in[23].IN15
+value_in[24] => value_in[24].IN15
+value_in[25] => value_in[25].IN15
+value_in[26] => value_in[26].IN15
+value_in[27] => value_in[27].IN15
+value_in[28] => value_in[28].IN15
+value_in[29] => value_in[29].IN15
+value_in[30] => value_in[30].IN15
+value_in[31] => value_in[31].IN15
 index[0] => Equal0.IN31
 index[0] => Equal1.IN3
 index[0] => Equal2.IN31
@@ -86262,6 +86614,11 @@ index[0] => Equal26.IN31
 index[0] => Equal27.IN6
 index[0] => Equal28.IN31
 index[0] => Equal29.IN1
+index[0] => Equal30.IN31
+index[0] => Equal31.IN2
+index[0] => Equal32.IN31
+index[0] => Equal33.IN31
+index[0] => Equal34.IN31
 index[1] => Equal0.IN30
 index[1] => Equal1.IN31
 index[1] => Equal2.IN3
@@ -86292,6 +86649,11 @@ index[1] => Equal26.IN5
 index[1] => Equal27.IN5
 index[1] => Equal28.IN30
 index[1] => Equal29.IN31
+index[1] => Equal30.IN1
+index[1] => Equal31.IN1
+index[1] => Equal32.IN30
+index[1] => Equal33.IN30
+index[1] => Equal34.IN30
 index[2] => Equal0.IN2
 index[2] => Equal1.IN2
 index[2] => Equal2.IN2
@@ -86322,6 +86684,11 @@ index[2] => Equal26.IN4
 index[2] => Equal27.IN4
 index[2] => Equal28.IN29
 index[2] => Equal29.IN30
+index[2] => Equal30.IN30
+index[2] => Equal31.IN31
+index[2] => Equal32.IN1
+index[2] => Equal33.IN1
+index[2] => Equal34.IN1
 index[3] => Equal0.IN29
 index[3] => Equal1.IN30
 index[3] => Equal2.IN30
@@ -86352,6 +86719,11 @@ index[3] => Equal26.IN3
 index[3] => Equal27.IN3
 index[3] => Equal28.IN28
 index[3] => Equal29.IN29
+index[3] => Equal30.IN29
+index[3] => Equal31.IN30
+index[3] => Equal32.IN29
+index[3] => Equal33.IN29
+index[3] => Equal34.IN29
 index[4] => Equal0.IN28
 index[4] => Equal1.IN29
 index[4] => Equal2.IN29
@@ -86382,6 +86754,11 @@ index[4] => Equal26.IN2
 index[4] => Equal27.IN2
 index[4] => Equal28.IN27
 index[4] => Equal29.IN28
+index[4] => Equal30.IN28
+index[4] => Equal31.IN29
+index[4] => Equal32.IN28
+index[4] => Equal33.IN28
+index[4] => Equal34.IN28
 index[5] => Equal0.IN1
 index[5] => Equal1.IN1
 index[5] => Equal2.IN1
@@ -86412,6 +86789,11 @@ index[5] => Equal26.IN1
 index[5] => Equal27.IN1
 index[5] => Equal28.IN26
 index[5] => Equal29.IN27
+index[5] => Equal30.IN27
+index[5] => Equal31.IN28
+index[5] => Equal32.IN27
+index[5] => Equal33.IN27
+index[5] => Equal34.IN27
 index[6] => Equal0.IN0
 index[6] => Equal1.IN0
 index[6] => Equal2.IN0
@@ -86442,6 +86824,11 @@ index[6] => Equal26.IN0
 index[6] => Equal27.IN0
 index[6] => Equal28.IN25
 index[6] => Equal29.IN26
+index[6] => Equal30.IN26
+index[6] => Equal31.IN27
+index[6] => Equal32.IN26
+index[6] => Equal33.IN26
+index[6] => Equal34.IN26
 index[7] => Equal0.IN27
 index[7] => Equal1.IN28
 index[7] => Equal2.IN28
@@ -86472,6 +86859,11 @@ index[7] => Equal26.IN30
 index[7] => Equal27.IN31
 index[7] => Equal28.IN0
 index[7] => Equal29.IN0
+index[7] => Equal30.IN0
+index[7] => Equal31.IN0
+index[7] => Equal32.IN0
+index[7] => Equal33.IN0
+index[7] => Equal34.IN0
 index[8] => Equal0.IN26
 index[8] => Equal1.IN27
 index[8] => Equal2.IN27
@@ -86502,6 +86894,11 @@ index[8] => Equal26.IN29
 index[8] => Equal27.IN30
 index[8] => Equal28.IN24
 index[8] => Equal29.IN25
+index[8] => Equal30.IN25
+index[8] => Equal31.IN26
+index[8] => Equal32.IN25
+index[8] => Equal33.IN25
+index[8] => Equal34.IN25
 index[9] => Equal0.IN25
 index[9] => Equal1.IN26
 index[9] => Equal2.IN26
@@ -86532,6 +86929,11 @@ index[9] => Equal26.IN28
 index[9] => Equal27.IN29
 index[9] => Equal28.IN23
 index[9] => Equal29.IN24
+index[9] => Equal30.IN24
+index[9] => Equal31.IN25
+index[9] => Equal32.IN24
+index[9] => Equal33.IN24
+index[9] => Equal34.IN24
 index[10] => Equal0.IN24
 index[10] => Equal1.IN25
 index[10] => Equal2.IN25
@@ -86562,6 +86964,11 @@ index[10] => Equal26.IN27
 index[10] => Equal27.IN28
 index[10] => Equal28.IN22
 index[10] => Equal29.IN23
+index[10] => Equal30.IN23
+index[10] => Equal31.IN24
+index[10] => Equal32.IN23
+index[10] => Equal33.IN23
+index[10] => Equal34.IN23
 index[11] => Equal0.IN23
 index[11] => Equal1.IN24
 index[11] => Equal2.IN24
@@ -86592,6 +86999,11 @@ index[11] => Equal26.IN26
 index[11] => Equal27.IN27
 index[11] => Equal28.IN21
 index[11] => Equal29.IN22
+index[11] => Equal30.IN22
+index[11] => Equal31.IN23
+index[11] => Equal32.IN22
+index[11] => Equal33.IN22
+index[11] => Equal34.IN22
 index[12] => Equal0.IN22
 index[12] => Equal1.IN23
 index[12] => Equal2.IN23
@@ -86622,6 +87034,11 @@ index[12] => Equal26.IN25
 index[12] => Equal27.IN26
 index[12] => Equal28.IN20
 index[12] => Equal29.IN21
+index[12] => Equal30.IN21
+index[12] => Equal31.IN22
+index[12] => Equal32.IN21
+index[12] => Equal33.IN21
+index[12] => Equal34.IN21
 index[13] => Equal0.IN21
 index[13] => Equal1.IN22
 index[13] => Equal2.IN22
@@ -86652,6 +87069,11 @@ index[13] => Equal26.IN24
 index[13] => Equal27.IN25
 index[13] => Equal28.IN19
 index[13] => Equal29.IN20
+index[13] => Equal30.IN20
+index[13] => Equal31.IN21
+index[13] => Equal32.IN20
+index[13] => Equal33.IN20
+index[13] => Equal34.IN20
 index[14] => Equal0.IN20
 index[14] => Equal1.IN21
 index[14] => Equal2.IN21
@@ -86682,6 +87104,11 @@ index[14] => Equal26.IN23
 index[14] => Equal27.IN24
 index[14] => Equal28.IN18
 index[14] => Equal29.IN19
+index[14] => Equal30.IN19
+index[14] => Equal31.IN20
+index[14] => Equal32.IN19
+index[14] => Equal33.IN19
+index[14] => Equal34.IN19
 index[15] => Equal0.IN19
 index[15] => Equal1.IN20
 index[15] => Equal2.IN20
@@ -86712,6 +87139,11 @@ index[15] => Equal26.IN22
 index[15] => Equal27.IN23
 index[15] => Equal28.IN17
 index[15] => Equal29.IN18
+index[15] => Equal30.IN18
+index[15] => Equal31.IN19
+index[15] => Equal32.IN18
+index[15] => Equal33.IN18
+index[15] => Equal34.IN18
 index[16] => Equal0.IN18
 index[16] => Equal1.IN19
 index[16] => Equal2.IN19
@@ -86742,6 +87174,11 @@ index[16] => Equal26.IN21
 index[16] => Equal27.IN22
 index[16] => Equal28.IN16
 index[16] => Equal29.IN17
+index[16] => Equal30.IN17
+index[16] => Equal31.IN18
+index[16] => Equal32.IN17
+index[16] => Equal33.IN17
+index[16] => Equal34.IN17
 index[17] => Equal0.IN17
 index[17] => Equal1.IN18
 index[17] => Equal2.IN18
@@ -86772,6 +87209,11 @@ index[17] => Equal26.IN20
 index[17] => Equal27.IN21
 index[17] => Equal28.IN15
 index[17] => Equal29.IN16
+index[17] => Equal30.IN16
+index[17] => Equal31.IN17
+index[17] => Equal32.IN16
+index[17] => Equal33.IN16
+index[17] => Equal34.IN16
 index[18] => Equal0.IN16
 index[18] => Equal1.IN17
 index[18] => Equal2.IN17
@@ -86802,6 +87244,11 @@ index[18] => Equal26.IN19
 index[18] => Equal27.IN20
 index[18] => Equal28.IN14
 index[18] => Equal29.IN15
+index[18] => Equal30.IN15
+index[18] => Equal31.IN16
+index[18] => Equal32.IN15
+index[18] => Equal33.IN15
+index[18] => Equal34.IN15
 index[19] => Equal0.IN15
 index[19] => Equal1.IN16
 index[19] => Equal2.IN16
@@ -86832,6 +87279,11 @@ index[19] => Equal26.IN18
 index[19] => Equal27.IN19
 index[19] => Equal28.IN13
 index[19] => Equal29.IN14
+index[19] => Equal30.IN14
+index[19] => Equal31.IN15
+index[19] => Equal32.IN14
+index[19] => Equal33.IN14
+index[19] => Equal34.IN14
 index[20] => Equal0.IN14
 index[20] => Equal1.IN15
 index[20] => Equal2.IN15
@@ -86862,6 +87314,11 @@ index[20] => Equal26.IN17
 index[20] => Equal27.IN18
 index[20] => Equal28.IN12
 index[20] => Equal29.IN13
+index[20] => Equal30.IN13
+index[20] => Equal31.IN14
+index[20] => Equal32.IN13
+index[20] => Equal33.IN13
+index[20] => Equal34.IN13
 index[21] => Equal0.IN13
 index[21] => Equal1.IN14
 index[21] => Equal2.IN14
@@ -86892,6 +87349,11 @@ index[21] => Equal26.IN16
 index[21] => Equal27.IN17
 index[21] => Equal28.IN11
 index[21] => Equal29.IN12
+index[21] => Equal30.IN12
+index[21] => Equal31.IN13
+index[21] => Equal32.IN12
+index[21] => Equal33.IN12
+index[21] => Equal34.IN12
 index[22] => Equal0.IN12
 index[22] => Equal1.IN13
 index[22] => Equal2.IN13
@@ -86922,6 +87384,11 @@ index[22] => Equal26.IN15
 index[22] => Equal27.IN16
 index[22] => Equal28.IN10
 index[22] => Equal29.IN11
+index[22] => Equal30.IN11
+index[22] => Equal31.IN12
+index[22] => Equal32.IN11
+index[22] => Equal33.IN11
+index[22] => Equal34.IN11
 index[23] => Equal0.IN11
 index[23] => Equal1.IN12
 index[23] => Equal2.IN12
@@ -86952,6 +87419,11 @@ index[23] => Equal26.IN14
 index[23] => Equal27.IN15
 index[23] => Equal28.IN9
 index[23] => Equal29.IN10
+index[23] => Equal30.IN10
+index[23] => Equal31.IN11
+index[23] => Equal32.IN10
+index[23] => Equal33.IN10
+index[23] => Equal34.IN10
 index[24] => Equal0.IN10
 index[24] => Equal1.IN11
 index[24] => Equal2.IN11
@@ -86982,6 +87454,11 @@ index[24] => Equal26.IN13
 index[24] => Equal27.IN14
 index[24] => Equal28.IN8
 index[24] => Equal29.IN9
+index[24] => Equal30.IN9
+index[24] => Equal31.IN10
+index[24] => Equal32.IN9
+index[24] => Equal33.IN9
+index[24] => Equal34.IN9
 index[25] => Equal0.IN9
 index[25] => Equal1.IN10
 index[25] => Equal2.IN10
@@ -87012,6 +87489,11 @@ index[25] => Equal26.IN12
 index[25] => Equal27.IN13
 index[25] => Equal28.IN7
 index[25] => Equal29.IN8
+index[25] => Equal30.IN8
+index[25] => Equal31.IN9
+index[25] => Equal32.IN8
+index[25] => Equal33.IN8
+index[25] => Equal34.IN8
 index[26] => Equal0.IN8
 index[26] => Equal1.IN9
 index[26] => Equal2.IN9
@@ -87042,6 +87524,11 @@ index[26] => Equal26.IN11
 index[26] => Equal27.IN12
 index[26] => Equal28.IN6
 index[26] => Equal29.IN7
+index[26] => Equal30.IN7
+index[26] => Equal31.IN8
+index[26] => Equal32.IN7
+index[26] => Equal33.IN7
+index[26] => Equal34.IN7
 index[27] => Equal0.IN7
 index[27] => Equal1.IN8
 index[27] => Equal2.IN8
@@ -87072,6 +87559,11 @@ index[27] => Equal26.IN10
 index[27] => Equal27.IN11
 index[27] => Equal28.IN5
 index[27] => Equal29.IN6
+index[27] => Equal30.IN6
+index[27] => Equal31.IN7
+index[27] => Equal32.IN6
+index[27] => Equal33.IN6
+index[27] => Equal34.IN6
 index[28] => Equal0.IN6
 index[28] => Equal1.IN7
 index[28] => Equal2.IN7
@@ -87102,6 +87594,11 @@ index[28] => Equal26.IN9
 index[28] => Equal27.IN10
 index[28] => Equal28.IN4
 index[28] => Equal29.IN5
+index[28] => Equal30.IN5
+index[28] => Equal31.IN6
+index[28] => Equal32.IN5
+index[28] => Equal33.IN5
+index[28] => Equal34.IN5
 index[29] => Equal0.IN5
 index[29] => Equal1.IN6
 index[29] => Equal2.IN6
@@ -87132,6 +87629,11 @@ index[29] => Equal26.IN8
 index[29] => Equal27.IN9
 index[29] => Equal28.IN3
 index[29] => Equal29.IN4
+index[29] => Equal30.IN4
+index[29] => Equal31.IN5
+index[29] => Equal32.IN4
+index[29] => Equal33.IN4
+index[29] => Equal34.IN4
 index[30] => Equal0.IN4
 index[30] => Equal1.IN5
 index[30] => Equal2.IN5
@@ -87162,6 +87664,11 @@ index[30] => Equal26.IN7
 index[30] => Equal27.IN8
 index[30] => Equal28.IN2
 index[30] => Equal29.IN3
+index[30] => Equal30.IN3
+index[30] => Equal31.IN4
+index[30] => Equal32.IN3
+index[30] => Equal33.IN3
+index[30] => Equal34.IN3
 index[31] => Equal0.IN3
 index[31] => Equal1.IN4
 index[31] => Equal2.IN4
@@ -87192,8 +87699,18 @@ index[31] => Equal26.IN6
 index[31] => Equal27.IN7
 index[31] => Equal28.IN1
 index[31] => Equal29.IN2
-clock => clock.IN30
-reset => reset.IN30
+index[31] => Equal30.IN2
+index[31] => Equal31.IN3
+index[31] => Equal32.IN2
+index[31] => Equal33.IN2
+index[31] => Equal34.IN2
+clock => clock.IN35
+reset => reset.IN35
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
+enable => comb.IN1
 enable => comb.IN1
 enable => comb.IN1
 enable => comb.IN1
@@ -87964,6 +88481,166 @@ value_out[736] <= register_11:loop1[129].snakePosition_reg1.data_out
 value_out[737] <= register_11:loop1[129].snakePosition_reg1.data_out
 value_out[738] <= register_11:loop1[129].snakePosition_reg1.data_out
 value_out[739] <= register_11:loop1[129].snakePosition_reg1.data_out
+value_out[740] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[741] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[742] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[743] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[744] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[745] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[746] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[747] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[748] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[749] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[750] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[751] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[752] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[753] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[754] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[755] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[756] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[757] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[758] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[759] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[760] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[761] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[762] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[763] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[764] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[765] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[766] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[767] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[768] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[769] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[770] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[771] <= register:snake_reg_invincibilitytimer1.data_out
+value_out[772] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[773] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[774] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[775] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[776] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[777] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[778] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[779] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[780] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[781] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[782] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[783] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[784] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[785] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[786] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[787] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[788] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[789] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[790] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[791] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[792] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[793] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[794] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[795] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[796] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[797] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[798] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[799] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[800] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[801] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[802] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[803] <= register:snake_reg_invincibilitytimer2.data_out
+value_out[804] <= register:snake_reg_invincibilityPosition.data_out
+value_out[805] <= register:snake_reg_invincibilityPosition.data_out
+value_out[806] <= register:snake_reg_invincibilityPosition.data_out
+value_out[807] <= register:snake_reg_invincibilityPosition.data_out
+value_out[808] <= register:snake_reg_invincibilityPosition.data_out
+value_out[809] <= register:snake_reg_invincibilityPosition.data_out
+value_out[810] <= register:snake_reg_invincibilityPosition.data_out
+value_out[811] <= register:snake_reg_invincibilityPosition.data_out
+value_out[812] <= register:snake_reg_invincibilityPosition.data_out
+value_out[813] <= register:snake_reg_invincibilityPosition.data_out
+value_out[814] <= register:snake_reg_invincibilityPosition.data_out
+value_out[815] <= register:snake_reg_invincibilityPosition.data_out
+value_out[816] <= register:snake_reg_invincibilityPosition.data_out
+value_out[817] <= register:snake_reg_invincibilityPosition.data_out
+value_out[818] <= register:snake_reg_invincibilityPosition.data_out
+value_out[819] <= register:snake_reg_invincibilityPosition.data_out
+value_out[820] <= register:snake_reg_invincibilityPosition.data_out
+value_out[821] <= register:snake_reg_invincibilityPosition.data_out
+value_out[822] <= register:snake_reg_invincibilityPosition.data_out
+value_out[823] <= register:snake_reg_invincibilityPosition.data_out
+value_out[824] <= register:snake_reg_invincibilityPosition.data_out
+value_out[825] <= register:snake_reg_invincibilityPosition.data_out
+value_out[826] <= register:snake_reg_invincibilityPosition.data_out
+value_out[827] <= register:snake_reg_invincibilityPosition.data_out
+value_out[828] <= register:snake_reg_invincibilityPosition.data_out
+value_out[829] <= register:snake_reg_invincibilityPosition.data_out
+value_out[830] <= register:snake_reg_invincibilityPosition.data_out
+value_out[831] <= register:snake_reg_invincibilityPosition.data_out
+value_out[832] <= register:snake_reg_invincibilityPosition.data_out
+value_out[833] <= register:snake_reg_invincibilityPosition.data_out
+value_out[834] <= register:snake_reg_invincibilityPosition.data_out
+value_out[835] <= register:snake_reg_invincibilityPosition.data_out
+value_out[836] <= register:snake_reg_score1.data_out
+value_out[837] <= register:snake_reg_score1.data_out
+value_out[838] <= register:snake_reg_score1.data_out
+value_out[839] <= register:snake_reg_score1.data_out
+value_out[840] <= register:snake_reg_score1.data_out
+value_out[841] <= register:snake_reg_score1.data_out
+value_out[842] <= register:snake_reg_score1.data_out
+value_out[843] <= register:snake_reg_score1.data_out
+value_out[844] <= register:snake_reg_score1.data_out
+value_out[845] <= register:snake_reg_score1.data_out
+value_out[846] <= register:snake_reg_score1.data_out
+value_out[847] <= register:snake_reg_score1.data_out
+value_out[848] <= register:snake_reg_score1.data_out
+value_out[849] <= register:snake_reg_score1.data_out
+value_out[850] <= register:snake_reg_score1.data_out
+value_out[851] <= register:snake_reg_score1.data_out
+value_out[852] <= register:snake_reg_score1.data_out
+value_out[853] <= register:snake_reg_score1.data_out
+value_out[854] <= register:snake_reg_score1.data_out
+value_out[855] <= register:snake_reg_score1.data_out
+value_out[856] <= register:snake_reg_score1.data_out
+value_out[857] <= register:snake_reg_score1.data_out
+value_out[858] <= register:snake_reg_score1.data_out
+value_out[859] <= register:snake_reg_score1.data_out
+value_out[860] <= register:snake_reg_score1.data_out
+value_out[861] <= register:snake_reg_score1.data_out
+value_out[862] <= register:snake_reg_score1.data_out
+value_out[863] <= register:snake_reg_score1.data_out
+value_out[864] <= register:snake_reg_score1.data_out
+value_out[865] <= register:snake_reg_score1.data_out
+value_out[866] <= register:snake_reg_score1.data_out
+value_out[867] <= register:snake_reg_score1.data_out
+value_out[868] <= register:snake_reg_snake2.data_out
+value_out[869] <= register:snake_reg_snake2.data_out
+value_out[870] <= register:snake_reg_snake2.data_out
+value_out[871] <= register:snake_reg_snake2.data_out
+value_out[872] <= register:snake_reg_snake2.data_out
+value_out[873] <= register:snake_reg_snake2.data_out
+value_out[874] <= register:snake_reg_snake2.data_out
+value_out[875] <= register:snake_reg_snake2.data_out
+value_out[876] <= register:snake_reg_snake2.data_out
+value_out[877] <= register:snake_reg_snake2.data_out
+value_out[878] <= register:snake_reg_snake2.data_out
+value_out[879] <= register:snake_reg_snake2.data_out
+value_out[880] <= register:snake_reg_snake2.data_out
+value_out[881] <= register:snake_reg_snake2.data_out
+value_out[882] <= register:snake_reg_snake2.data_out
+value_out[883] <= register:snake_reg_snake2.data_out
+value_out[884] <= register:snake_reg_snake2.data_out
+value_out[885] <= register:snake_reg_snake2.data_out
+value_out[886] <= register:snake_reg_snake2.data_out
+value_out[887] <= register:snake_reg_snake2.data_out
+value_out[888] <= register:snake_reg_snake2.data_out
+value_out[889] <= register:snake_reg_snake2.data_out
+value_out[890] <= register:snake_reg_snake2.data_out
+value_out[891] <= register:snake_reg_snake2.data_out
+value_out[892] <= register:snake_reg_snake2.data_out
+value_out[893] <= register:snake_reg_snake2.data_out
+value_out[894] <= register:snake_reg_snake2.data_out
+value_out[895] <= register:snake_reg_snake2.data_out
+value_out[896] <= register:snake_reg_snake2.data_out
+value_out[897] <= register:snake_reg_snake2.data_out
+value_out[898] <= register:snake_reg_snake2.data_out
+value_out[899] <= register:snake_reg_snake2.data_out
 
 
 |skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_head1position
@@ -93539,6 +94216,1636 @@ clr => q~reg0.ACLR
 
 
 |skeleton|processor:my_processor|snake_register:sr1|register_11:loop1[129].snakePosition_reg1|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1
+data_out[0] <= dffe_ref:d0.port0
+data_out[1] <= dffe_ref:d1.port0
+data_out[2] <= dffe_ref:d2.port0
+data_out[3] <= dffe_ref:d3.port0
+data_out[4] <= dffe_ref:d4.port0
+data_out[5] <= dffe_ref:d5.port0
+data_out[6] <= dffe_ref:d6.port0
+data_out[7] <= dffe_ref:d7.port0
+data_out[8] <= dffe_ref:d8.port0
+data_out[9] <= dffe_ref:d9.port0
+data_out[10] <= dffe_ref:d10.port0
+data_out[11] <= dffe_ref:d11.port0
+data_out[12] <= dffe_ref:d12.port0
+data_out[13] <= dffe_ref:d13.port0
+data_out[14] <= dffe_ref:d14.port0
+data_out[15] <= dffe_ref:d15.port0
+data_out[16] <= dffe_ref:d16.port0
+data_out[17] <= dffe_ref:d17.port0
+data_out[18] <= dffe_ref:d18.port0
+data_out[19] <= dffe_ref:d19.port0
+data_out[20] <= dffe_ref:d20.port0
+data_out[21] <= dffe_ref:d21.port0
+data_out[22] <= dffe_ref:d22.port0
+data_out[23] <= dffe_ref:d23.port0
+data_out[24] <= dffe_ref:d24.port0
+data_out[25] <= dffe_ref:d25.port0
+data_out[26] <= dffe_ref:d26.port0
+data_out[27] <= dffe_ref:d27.port0
+data_out[28] <= dffe_ref:d28.port0
+data_out[29] <= dffe_ref:d29.port0
+data_out[30] <= dffe_ref:d30.port0
+data_out[31] <= dffe_ref:d31.port0
+clock => clock.IN32
+ctrl_writeEnable => ctrl_writeEnable.IN32
+ctrl_reset => ctrl_reset.IN32
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d27
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d28
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d29
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d30
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer1|dffe_ref:d31
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2
+data_out[0] <= dffe_ref:d0.port0
+data_out[1] <= dffe_ref:d1.port0
+data_out[2] <= dffe_ref:d2.port0
+data_out[3] <= dffe_ref:d3.port0
+data_out[4] <= dffe_ref:d4.port0
+data_out[5] <= dffe_ref:d5.port0
+data_out[6] <= dffe_ref:d6.port0
+data_out[7] <= dffe_ref:d7.port0
+data_out[8] <= dffe_ref:d8.port0
+data_out[9] <= dffe_ref:d9.port0
+data_out[10] <= dffe_ref:d10.port0
+data_out[11] <= dffe_ref:d11.port0
+data_out[12] <= dffe_ref:d12.port0
+data_out[13] <= dffe_ref:d13.port0
+data_out[14] <= dffe_ref:d14.port0
+data_out[15] <= dffe_ref:d15.port0
+data_out[16] <= dffe_ref:d16.port0
+data_out[17] <= dffe_ref:d17.port0
+data_out[18] <= dffe_ref:d18.port0
+data_out[19] <= dffe_ref:d19.port0
+data_out[20] <= dffe_ref:d20.port0
+data_out[21] <= dffe_ref:d21.port0
+data_out[22] <= dffe_ref:d22.port0
+data_out[23] <= dffe_ref:d23.port0
+data_out[24] <= dffe_ref:d24.port0
+data_out[25] <= dffe_ref:d25.port0
+data_out[26] <= dffe_ref:d26.port0
+data_out[27] <= dffe_ref:d27.port0
+data_out[28] <= dffe_ref:d28.port0
+data_out[29] <= dffe_ref:d29.port0
+data_out[30] <= dffe_ref:d30.port0
+data_out[31] <= dffe_ref:d31.port0
+clock => clock.IN32
+ctrl_writeEnable => ctrl_writeEnable.IN32
+ctrl_reset => ctrl_reset.IN32
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d27
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d28
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d29
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d30
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilitytimer2|dffe_ref:d31
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition
+data_out[0] <= dffe_ref:d0.port0
+data_out[1] <= dffe_ref:d1.port0
+data_out[2] <= dffe_ref:d2.port0
+data_out[3] <= dffe_ref:d3.port0
+data_out[4] <= dffe_ref:d4.port0
+data_out[5] <= dffe_ref:d5.port0
+data_out[6] <= dffe_ref:d6.port0
+data_out[7] <= dffe_ref:d7.port0
+data_out[8] <= dffe_ref:d8.port0
+data_out[9] <= dffe_ref:d9.port0
+data_out[10] <= dffe_ref:d10.port0
+data_out[11] <= dffe_ref:d11.port0
+data_out[12] <= dffe_ref:d12.port0
+data_out[13] <= dffe_ref:d13.port0
+data_out[14] <= dffe_ref:d14.port0
+data_out[15] <= dffe_ref:d15.port0
+data_out[16] <= dffe_ref:d16.port0
+data_out[17] <= dffe_ref:d17.port0
+data_out[18] <= dffe_ref:d18.port0
+data_out[19] <= dffe_ref:d19.port0
+data_out[20] <= dffe_ref:d20.port0
+data_out[21] <= dffe_ref:d21.port0
+data_out[22] <= dffe_ref:d22.port0
+data_out[23] <= dffe_ref:d23.port0
+data_out[24] <= dffe_ref:d24.port0
+data_out[25] <= dffe_ref:d25.port0
+data_out[26] <= dffe_ref:d26.port0
+data_out[27] <= dffe_ref:d27.port0
+data_out[28] <= dffe_ref:d28.port0
+data_out[29] <= dffe_ref:d29.port0
+data_out[30] <= dffe_ref:d30.port0
+data_out[31] <= dffe_ref:d31.port0
+clock => clock.IN32
+ctrl_writeEnable => ctrl_writeEnable.IN32
+ctrl_reset => ctrl_reset.IN32
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d27
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d28
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d29
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d30
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_invincibilityPosition|dffe_ref:d31
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1
+data_out[0] <= dffe_ref:d0.port0
+data_out[1] <= dffe_ref:d1.port0
+data_out[2] <= dffe_ref:d2.port0
+data_out[3] <= dffe_ref:d3.port0
+data_out[4] <= dffe_ref:d4.port0
+data_out[5] <= dffe_ref:d5.port0
+data_out[6] <= dffe_ref:d6.port0
+data_out[7] <= dffe_ref:d7.port0
+data_out[8] <= dffe_ref:d8.port0
+data_out[9] <= dffe_ref:d9.port0
+data_out[10] <= dffe_ref:d10.port0
+data_out[11] <= dffe_ref:d11.port0
+data_out[12] <= dffe_ref:d12.port0
+data_out[13] <= dffe_ref:d13.port0
+data_out[14] <= dffe_ref:d14.port0
+data_out[15] <= dffe_ref:d15.port0
+data_out[16] <= dffe_ref:d16.port0
+data_out[17] <= dffe_ref:d17.port0
+data_out[18] <= dffe_ref:d18.port0
+data_out[19] <= dffe_ref:d19.port0
+data_out[20] <= dffe_ref:d20.port0
+data_out[21] <= dffe_ref:d21.port0
+data_out[22] <= dffe_ref:d22.port0
+data_out[23] <= dffe_ref:d23.port0
+data_out[24] <= dffe_ref:d24.port0
+data_out[25] <= dffe_ref:d25.port0
+data_out[26] <= dffe_ref:d26.port0
+data_out[27] <= dffe_ref:d27.port0
+data_out[28] <= dffe_ref:d28.port0
+data_out[29] <= dffe_ref:d29.port0
+data_out[30] <= dffe_ref:d30.port0
+data_out[31] <= dffe_ref:d31.port0
+clock => clock.IN32
+ctrl_writeEnable => ctrl_writeEnable.IN32
+ctrl_reset => ctrl_reset.IN32
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d27
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d28
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d29
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d30
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_score1|dffe_ref:d31
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2
+data_out[0] <= dffe_ref:d0.port0
+data_out[1] <= dffe_ref:d1.port0
+data_out[2] <= dffe_ref:d2.port0
+data_out[3] <= dffe_ref:d3.port0
+data_out[4] <= dffe_ref:d4.port0
+data_out[5] <= dffe_ref:d5.port0
+data_out[6] <= dffe_ref:d6.port0
+data_out[7] <= dffe_ref:d7.port0
+data_out[8] <= dffe_ref:d8.port0
+data_out[9] <= dffe_ref:d9.port0
+data_out[10] <= dffe_ref:d10.port0
+data_out[11] <= dffe_ref:d11.port0
+data_out[12] <= dffe_ref:d12.port0
+data_out[13] <= dffe_ref:d13.port0
+data_out[14] <= dffe_ref:d14.port0
+data_out[15] <= dffe_ref:d15.port0
+data_out[16] <= dffe_ref:d16.port0
+data_out[17] <= dffe_ref:d17.port0
+data_out[18] <= dffe_ref:d18.port0
+data_out[19] <= dffe_ref:d19.port0
+data_out[20] <= dffe_ref:d20.port0
+data_out[21] <= dffe_ref:d21.port0
+data_out[22] <= dffe_ref:d22.port0
+data_out[23] <= dffe_ref:d23.port0
+data_out[24] <= dffe_ref:d24.port0
+data_out[25] <= dffe_ref:d25.port0
+data_out[26] <= dffe_ref:d26.port0
+data_out[27] <= dffe_ref:d27.port0
+data_out[28] <= dffe_ref:d28.port0
+data_out[29] <= dffe_ref:d29.port0
+data_out[30] <= dffe_ref:d30.port0
+data_out[31] <= dffe_ref:d31.port0
+clock => clock.IN32
+ctrl_writeEnable => ctrl_writeEnable.IN32
+ctrl_reset => ctrl_reset.IN32
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+data_in[6] => data_in[6].IN1
+data_in[7] => data_in[7].IN1
+data_in[8] => data_in[8].IN1
+data_in[9] => data_in[9].IN1
+data_in[10] => data_in[10].IN1
+data_in[11] => data_in[11].IN1
+data_in[12] => data_in[12].IN1
+data_in[13] => data_in[13].IN1
+data_in[14] => data_in[14].IN1
+data_in[15] => data_in[15].IN1
+data_in[16] => data_in[16].IN1
+data_in[17] => data_in[17].IN1
+data_in[18] => data_in[18].IN1
+data_in[19] => data_in[19].IN1
+data_in[20] => data_in[20].IN1
+data_in[21] => data_in[21].IN1
+data_in[22] => data_in[22].IN1
+data_in[23] => data_in[23].IN1
+data_in[24] => data_in[24].IN1
+data_in[25] => data_in[25].IN1
+data_in[26] => data_in[26].IN1
+data_in[27] => data_in[27].IN1
+data_in[28] => data_in[28].IN1
+data_in[29] => data_in[29].IN1
+data_in[30] => data_in[30].IN1
+data_in[31] => data_in[31].IN1
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d0
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d1
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d2
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d3
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d4
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d5
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d6
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d7
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d8
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d9
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d10
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d11
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d12
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d13
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d14
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d15
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d16
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d17
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d18
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d19
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d20
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d21
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d22
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d23
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d24
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d25
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d26
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d27
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d28
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d29
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d30
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|processor:my_processor|snake_register:sr1|register:snake_reg_snake2|dffe_ref:d31
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK

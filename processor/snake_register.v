@@ -3,7 +3,7 @@ module snake_register (value_in, index, clock, reset, enable, value_out);
 input [31:0] value_in, index;
 input clock, reset, enable;
 
-output [739:0] value_out;
+output [995:0] value_out;
 
 genvar i;
 
@@ -114,6 +114,70 @@ generate
 		);
 	end
 endgenerate
+
+register snake_reg_invincibilitytimer1 (
+	 .data_out(value_out[771:740]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 130) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_invincibilitytimer2 (
+	 .data_out(value_out[803:772]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 131) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_invincibilityPosition (
+	 .data_out(value_out[835:804]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 132) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_score1 (
+	 .data_out(value_out[867:836]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 133) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_score2 (
+	 .data_out(value_out[899:868]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 134) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_highscore1 (
+	 .data_out(value_out[931:900]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 135) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_highscore2 (
+	 .data_out(value_out[963:932]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 136) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
+
+register snake_reg_highscore3 (
+	 .data_out(value_out[995:964]),
+	 .clock(clock),
+	 .ctrl_writeEnable((index == 137) && enable),
+	 .ctrl_reset(reset),
+	 .data_in(value_in)
+);
 
 
 
