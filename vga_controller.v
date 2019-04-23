@@ -40,12 +40,15 @@ integer counter;
 //input [31:0] score1, score2;
                    
 ///////// ////                     
-reg [18:0] ADDR;
+reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh,ADDRnum;
+reg [15:0] ADDRlb;
 reg [23:0] bgr_data;
 wire VGA_CLK_n;
-wire [7:0] index;
+wire [7:0] index,index_main,index_highscore,index_head,index_body, index_apple,index_sl,index_lb,index_pnh;
+wire [7:0] index_zero,index_one,index_two,index_three,index_four,index_five,index_six,index_seven,index_eight,index_nine;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
+integer cc,rr,ccc,rrr,crcr;
 ////
 
 
@@ -75,7 +78,96 @@ img_data	img_data_inst (
 	.clock ( VGA_CLK_n ),
 	.q ( index )
 	);
-	
+//	main_data	main_data_inst (
+//	.address ( ADDR ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_main )
+//	);
+//	highscore_data	highscore_data_inst (
+//	.address ( ADDR ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_highscore )
+//	);
+	head_data	head_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_head )
+	);
+	body_data	body_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_body )
+	);
+	apple_data	apple_data_inst (
+	.address ( ADDR144 ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_apple )
+	);
+	lb	lb_data_inst (
+	.address ( ADDRlb ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_lb )
+	);	
+	zero_data	zero_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_zero )
+	);	
+	one_data	one_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_one )
+	);	
+	two_data	two_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_two )
+	);	
+	three_data	three_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_three )
+	);	
+	four_data	four_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_four )
+	);	
+	five_data	five_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_five )
+	);	
+	six_data	_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_six )
+	);	
+	seven_data	seven_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_seven )
+	);	
+	eight_data	eight_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_eight )
+	);	
+	nine_data	nine_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_nine )
+	);	
+//	snakelogo_data	sl_data_inst (
+//	.address ( ADDRsl ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_sl )
+//	);	
+//	playandhigh_data	pnh_data_inst (
+//	.address ( ADDRpnh ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_pnh )
+//	);
 /////////////////////////
 //////Add switch-input logic here
 
@@ -90,6 +182,9 @@ integer boardRow, boardCol;
  integer stage;
  
  integer move1;
+ integer dig1,dig2,dig3,dig4,dig5,dig6;
+ reg [3:0] digreg1,digreg2,digreg3,digreg4,digreg5,digreg6;
+ reg [7:0] digindex1,digindex2,digindex3,digindex4,digindex5,digindex6;
 
 integer applePosition;
 integer invincibilityTimer1, invincibilityTimer2, invincibilityPosition, score1, score2;
@@ -100,6 +195,12 @@ reg [7:0] color_index;
 initial begin
 	pixelWidth = 12;
 	move1 = 2;
+	dig1=9;
+	dig2=9;
+	dig3=9;
+	dig4=9;
+	dig5=9;
+	dig6=9;
 	
 	//applePosition = 40*10+25;
 	
@@ -107,8 +208,10 @@ end
 
 integer j;
 reg isInImage;
+integer lbaddr,numaddr;
 
 integer head1position, head2position;
+
 integer currPosition, currPosition2;
 reg [1:0] currDirection;
 
@@ -130,7 +233,13 @@ begin
 	//stage = snake_data[(1824-1600+1)*32-1 -:32];
 	//stage = 2;
 	
-	
+	digreg1=dig1;
+	digreg2=dig2;
+	digreg3=dig3;
+	digreg4=dig4;
+	digreg5=dig5;
+	digreg6=dig6;
+
 	// 1. get the stage
 	stage = snake_data[359:328];
 	
@@ -154,16 +263,49 @@ begin
 	
 	// 3. loop through all directions to see if the current body part has a color
 	
+					addressRow = ADDR / 640;
+			addressCol = ADDR % 640; 
+
+//wheretheheadis = snake_data[2*(head1)+1 -:2];
+//						if (wheretheheadis == 2'b00) begin
+//							rr=addressCol % 12;
+//                     cc= 12 * (addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b01) begin
+//							cc=addressCol % 12;
+//                     rr= 12 * (addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b10) begin
+//							rr=addressCol % 12;
+//                     cc= 12 * (12-addressRow % 12);
+//						end
+//						else if (wheretheheadis == 2'b11) begin
+//							cc= 12 - addressCol % 12;
+//                     rr= 12 * (addressRow % 12);
+//						end
+//
+//						crcr=cc+rr;
+//						ADDRHEAD=crcr;
+					ccc=addressCol % 12;
+                 rrr= 12 * (addressRow % 12);
+						ADDR144=ccc+rrr;
+								lbaddr=((addressRow-38)*250+addressCol-194)%34750;
+								ADDRlb=lbaddr;
+								numaddr=addressCol % 32 +32 * (addressRow % 40);
+								ADDRnum=numaddr;
+	
 	if (stage== 32'd0) begin
-		color_index = 8'd2;
+		color_index = 8'd0;
+		
+
 	end
 	
 	
 	if (stage == 32'd2) begin
 		//color_index = 8'd1;
 	
-			addressRow = ADDR / 640;
-			addressCol = ADDR % 640; 
+//			addressRow = ADDR / 640;
+//			addressCol = ADDR % 640; 
 			 
 			// check if ADDR is in the game screen (40x40 board)
 			if (addressCol < 480) begin
@@ -186,7 +328,12 @@ begin
 				
 				
 				if (isBoardPositionPresent == 1'b1) begin
-					color_index = 8'd1;
+					color_index = index_body;
+					isInImage = 1'b1;
+				end
+				
+				if (currPosition == boardPosition) begin
+					color_index = index_head;
 					isInImage = 1'b1;
 				end
 				
@@ -197,7 +344,7 @@ begin
 				end
 				
 				if (boardPosition == applePosition) begin
-					color_index = 8'd3;
+					color_index = index_apple;
 					isInImage = 1'b1;
 				end
 				
@@ -207,7 +354,7 @@ begin
 				end
 				
 				if (isInImage == 1'b0) begin
-					color_index = 8'd4;
+					color_index = index;
 				end
 				
 				
@@ -215,16 +362,16 @@ begin
 			end
 
 			// draw boundaries of board
-			else if (addressCol == 480) begin
-				color_index = 8'd0;
-			end
+//			else if (addressCol == 480) begin
+//				color_index = 8'd0;
+//			end
 			// area for drawing hearts timer
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
-					color_index = 8'd3;
+					color_index = 8'd92;
 				end
 				else begin
-					color_index = 8'd4;
+					color_index = index;
 				end
 			end
 			// area for drawing invincibility timer
@@ -237,13 +384,129 @@ begin
 				end
 			end
 			else begin
-				color_index = 8'd4;
+				color_index = index;
 			end
 		
 			
 	end
+
+	
+
 	if (stage == 32'd3) begin 
-		color_index = 8'd3;
+		color_index = 8'h44;
+		
+		
+		case (digreg1)
+		4'd0 : digindex1=index_zero;
+		4'd1 : digindex1=index_one;
+		4'd2 : digindex1=index_two;
+		4'd3 : digindex1=index_three;
+		4'd4 : digindex1=index_four;
+		4'd5 : digindex1=index_five;
+		4'd6 : digindex1=index_six;
+		4'd7 : digindex1=index_seven;
+		4'd8 : digindex1=index_eight;
+		4'd9 : digindex1=index_nine;
+		endcase
+			case (digreg2)
+		4'd0 : digindex2=index_zero;
+		4'd1 : digindex2=index_one;
+		4'd2 : digindex2=index_two;
+		4'd3 : digindex2=index_three;
+		4'd4 : digindex2=index_four;
+		4'd5 : digindex2=index_five;
+		4'd6 : digindex2=index_six;
+		4'd7 : digindex2=index_seven;
+		4'd8 : digindex2=index_eight;
+		4'd9 : digindex2=index_nine;
+		endcase
+		
+				case (digreg3)
+		4'd0 : digindex3=index_zero;
+		4'd1 : digindex3=index_one;
+		4'd2 : digindex3=index_two;
+		4'd3 : digindex3=index_three;
+		4'd4 : digindex3=index_four;
+		4'd5 : digindex3=index_five;
+		4'd6 : digindex3=index_six;
+		4'd7 : digindex3=index_seven;
+		4'd8 : digindex3=index_eight;
+		4'd9 : digindex3=index_nine;
+		endcase
+		
+				case (digreg4)
+		4'd0 : digindex4=index_zero;
+		4'd1 : digindex4=index_one;
+		4'd2 : digindex4=index_two;
+		4'd3 : digindex4=index_three;
+		4'd4 : digindex4=index_four;
+		4'd5 : digindex4=index_five;
+		4'd6 : digindex4=index_six;
+		4'd7 : digindex4=index_seven;
+		4'd8 : digindex4=index_eight;
+		4'd9 : digindex4=index_nine;
+		endcase
+		
+				case (digreg5)
+		4'd0 : digindex5=index_zero;
+		4'd1 : digindex5=index_one;
+		4'd2 : digindex5=index_two;
+		4'd3 : digindex5=index_three;
+		4'd4 : digindex5=index_four;
+		4'd5 : digindex5=index_five;
+		4'd6 : digindex5=index_six;
+		4'd7 : digindex5=index_seven;
+		4'd8 : digindex5=index_eight;
+		4'd9 : digindex5=index_nine;
+		endcase
+		
+				case (digreg6)
+		4'd0 : digindex6=index_zero;
+		4'd1 : digindex6=index_one;
+		4'd2 : digindex6=index_two;
+		4'd3 : digindex6=index_three;
+		4'd4 : digindex6=index_four;
+		4'd5 : digindex6=index_five;
+		4'd6 : digindex6=index_six;
+		4'd7 : digindex6=index_seven;
+		4'd8 : digindex6=index_eight;
+		4'd9 : digindex6=index_nine;
+		endcase
+		if(addressRow>38&&addressRow<177&&addressCol>194&&addressCol<444)
+		begin
+
+		color_index=index_lb;
+		end
+		if(addressRow>239&&addressRow<280&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index=digindex1;
+		end
+		if(addressRow>239&&addressRow<280&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex2;
+		end
+		if(addressRow>319&&addressRow<360&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index= digindex3;
+		end
+		if(addressRow>319&&addressRow<360&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex4;
+		end
+		if(addressRow>399&&addressRow<440&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index= digindex5;
+		end
+		if(addressRow>399&&addressRow<440&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex6;
+		end
 	end
 //		else begin
 //			color_index = 8'd4;
