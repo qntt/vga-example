@@ -40,11 +40,12 @@ integer counter;
 //input [31:0] score1, score2;
                    
 ///////// ////                     
-reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh;
+reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh,ADDRnum;
 reg [15:0] ADDRlb;
 reg [23:0] bgr_data;
 wire VGA_CLK_n;
 wire [7:0] index,index_main,index_highscore,index_head,index_body, index_apple,index_sl,index_lb,index_pnh;
+wire [7:0] index_zero,index_one,index_two,index_three,index_four,index_five,index_six,index_seven,index_eight,index_nine;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
 integer cc,rr,ccc,rrr,crcr;
@@ -107,6 +108,56 @@ img_data	img_data_inst (
 	.clock ( VGA_CLK_n ),
 	.q ( index_lb )
 	);	
+	zero_data	zero_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_zero )
+	);	
+	one_data	one_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_one )
+	);	
+	two_data	two_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_two )
+	);	
+	three_data	three_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_three )
+	);	
+	four_data	four_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_four )
+	);	
+	five_data	five_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_five )
+	);	
+	six_data	_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_six )
+	);	
+	seven_data	seven_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_seven )
+	);	
+	eight_data	eight_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_eight )
+	);	
+	nine_data	nine_data_inst (
+	.address ( ADDRnum ),
+	.clock ( VGA_CLK_n ),
+	.q ( index_nine )
+	);	
 //	snakelogo_data	sl_data_inst (
 //	.address ( ADDRsl ),
 //	.clock ( VGA_CLK_n ),
@@ -131,6 +182,9 @@ integer boardRow, boardCol;
  integer stage;
  
  integer move1;
+ integer dig1,dig2,dig3,dig4,dig5,dig6;
+ reg [3:0] digreg1,digreg2,digreg3,digreg4,digreg5,digreg6;
+ reg [7:0] digindex1,digindex2,digindex3,digindex4,digindex5,digindex6;
 
 integer applePosition;
  
@@ -140,6 +194,12 @@ reg [7:0] color_index;
 initial begin
 	pixelWidth = 12;
 	move1 = 2;
+	dig1=9;
+	dig2=9;
+	dig3=9;
+	dig4=9;
+	dig5=9;
+	dig6=9;
 	
 	//applePosition = 40*10+25;
 	
@@ -147,7 +207,7 @@ end
 
 integer j;
 reg isInImage;
-integer lbaddr;
+integer lbaddr,numaddr;
 
 integer head1position, head2position;
 integer currPosition;
@@ -169,7 +229,13 @@ begin
 	//stage = snake_data[(1824-1600+1)*32-1 -:32];
 	//stage = 2;
 	
-	
+	digreg1=dig1;
+	digreg2=dig2;
+	digreg3=dig3;
+	digreg4=dig4;
+	digreg5=dig5;
+	digreg6=dig6;
+
 	// 1. get the stage
 	stage = snake_data[359:328];
 	
@@ -214,6 +280,8 @@ begin
 						ADDR144=ccc+rrr;
 								lbaddr=((addressRow-38)*250+addressCol-194)%34750;
 								ADDRlb=lbaddr;
+								numaddr=addressCol % 32 +32 * (addressRow % 40);
+								ADDRnum=numaddr;
 	
 	if (stage== 32'd0) begin
 		color_index = 8'd0;
@@ -284,14 +352,124 @@ begin
 		
 			
 	end
+
+	
+
 	if (stage == 32'd3) begin 
-		color_index = 8'd1;
+		color_index = 8'h44;
+		
+		
+		case (digreg1)
+		4'd0 : digindex1=index_zero;
+		4'd1 : digindex1=index_one;
+		4'd2 : digindex1=index_two;
+		4'd3 : digindex1=index_three;
+		4'd4 : digindex1=index_four;
+		4'd5 : digindex1=index_five;
+		4'd6 : digindex1=index_six;
+		4'd7 : digindex1=index_seven;
+		4'd8 : digindex1=index_eight;
+		4'd9 : digindex1=index_nine;
+		endcase
+			case (digreg2)
+		4'd0 : digindex2=index_zero;
+		4'd1 : digindex2=index_one;
+		4'd2 : digindex2=index_two;
+		4'd3 : digindex2=index_three;
+		4'd4 : digindex2=index_four;
+		4'd5 : digindex2=index_five;
+		4'd6 : digindex2=index_six;
+		4'd7 : digindex2=index_seven;
+		4'd8 : digindex2=index_eight;
+		4'd9 : digindex2=index_nine;
+		endcase
+		
+				case (digreg3)
+		4'd0 : digindex3=index_zero;
+		4'd1 : digindex3=index_one;
+		4'd2 : digindex3=index_two;
+		4'd3 : digindex3=index_three;
+		4'd4 : digindex3=index_four;
+		4'd5 : digindex3=index_five;
+		4'd6 : digindex3=index_six;
+		4'd7 : digindex3=index_seven;
+		4'd8 : digindex3=index_eight;
+		4'd9 : digindex3=index_nine;
+		endcase
+		
+				case (digreg4)
+		4'd0 : digindex4=index_zero;
+		4'd1 : digindex4=index_one;
+		4'd2 : digindex4=index_two;
+		4'd3 : digindex4=index_three;
+		4'd4 : digindex4=index_four;
+		4'd5 : digindex4=index_five;
+		4'd6 : digindex4=index_six;
+		4'd7 : digindex4=index_seven;
+		4'd8 : digindex4=index_eight;
+		4'd9 : digindex4=index_nine;
+		endcase
+		
+				case (digreg5)
+		4'd0 : digindex5=index_zero;
+		4'd1 : digindex5=index_one;
+		4'd2 : digindex5=index_two;
+		4'd3 : digindex5=index_three;
+		4'd4 : digindex5=index_four;
+		4'd5 : digindex5=index_five;
+		4'd6 : digindex5=index_six;
+		4'd7 : digindex5=index_seven;
+		4'd8 : digindex5=index_eight;
+		4'd9 : digindex5=index_nine;
+		endcase
+		
+				case (digreg6)
+		4'd0 : digindex6=index_zero;
+		4'd1 : digindex6=index_one;
+		4'd2 : digindex6=index_two;
+		4'd3 : digindex6=index_three;
+		4'd4 : digindex6=index_four;
+		4'd5 : digindex6=index_five;
+		4'd6 : digindex6=index_six;
+		4'd7 : digindex6=index_seven;
+		4'd8 : digindex6=index_eight;
+		4'd9 : digindex6=index_nine;
+		endcase
 		if(addressRow>38&&addressRow<177&&addressCol>194&&addressCol<444)
 		begin
 
 		color_index=index_lb;
 		end
-		
+		if(addressRow>239&&addressRow<280&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index=digindex1;
+		end
+		if(addressRow>239&&addressRow<280&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex2;
+		end
+		if(addressRow>319&&addressRow<360&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index= digindex3;
+		end
+		if(addressRow>319&&addressRow<360&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex4;
+		end
+		if(addressRow>399&&addressRow<440&&addressCol>287&&addressCol<320)
+		begin
+
+		color_index= digindex5;
+		end
+		if(addressRow>399&&addressRow<440&&addressCol>319&&addressCol<352)
+		begin
+
+		color_index= digindex6;
+		end
 	end
 //		else begin
 //			color_index = 8'd4;
