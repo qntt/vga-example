@@ -73,9 +73,12 @@ module skeleton(resetn,
 	// lcd controller
 	lcd mylcd(clock, ~resetn, 1'b1, ps2_out, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
 	
+//	integer highscore1;
+//	wire [3:0] highscore1Tens, highscore1Ones;
+	
 	// example for sending ps2 data to the first two seven segment displays
-	Hexadecimal_To_Seven_Segment hex1(ps2_out[3:0], seg1);
-	Hexadecimal_To_Seven_Segment hex2(ps2_out[7:4], seg2);
+//	Hexadecimal_To_Seven_Segment hex1(highscore1Tens[3:0], seg1);
+//	Hexadecimal_To_Seven_Segment hex2(highscore1Ones[3:0], seg2);
 	
 	// the other seven segment displays are currently set to 0
 	Hexadecimal_To_Seven_Segment hex3(4'b0, seg3);
@@ -143,8 +146,13 @@ module skeleton(resetn,
 			else if (left2==1'b0 && move2 != 2) begin
 				move2 = 4;
 			end
+			
+//			highscore1 = snake_data[931:900];
 
 	end
+	
+//	assign highscore1Tens = highscore1/10;
+//	assign highscore1Ones = highscore1%10;
 	
 	always@(posedge clock) begin
 	

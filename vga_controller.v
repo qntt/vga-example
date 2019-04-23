@@ -40,11 +40,12 @@ integer counter;
 //input [31:0] score1, score2;
                    
 ///////// ////                     
-reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh,ADDRnum;
-reg [15:0] ADDRlb;
+reg [18:0] ADDR,ADDR144,ADDRsl,ADDRpnh,ADDRnum,ADDRboard;
+reg [15:0] ADDRlb,ADDRlogo;
+reg [16:0] ADDRsidebar;
 reg [23:0] bgr_data;
 wire VGA_CLK_n;
-wire [7:0] index,index_main,index_highscore,index_head,index_body, index_apple,index_sl,index_lb,index_pnh;
+wire [7:0] index,index_main,index_highscore,index_head,index_body, index_apple,index_sl,index_lb,index_pnh,index_logo,index_sidebar;
 wire [7:0] index_zero,index_one,index_two,index_three,index_four,index_five,index_six,index_seven,index_eight,index_nine;
 wire [23:0] bgr_data_raw;
 wire cBLANK_n,cHS,cVS,rst;
@@ -74,10 +75,15 @@ end
 //////INDEX addr.
 assign VGA_CLK_n = ~iVGA_CLK;
 img_data	img_data_inst (
-	.address ( ADDR ),
+	.address ( ADDRboard ),
 	.clock ( VGA_CLK_n ),
 	.q ( index )
 	);
+//sidebar_data	sb_data_inst (
+//	.address ( ADDRsidebar ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_sidebar )
+//	);
 
 //	main_data	main_data_inst (
 //	.address ( ADDR ),
@@ -108,6 +114,11 @@ img_data	img_data_inst (
 //	.address ( ADDRlb ),
 //	.clock ( VGA_CLK_n ),
 //	.q ( index_lb )
+//	);	
+//	snakelogo	sl_data_inst (
+//	.address ( ADDRlogo ),
+//	.clock ( VGA_CLK_n ),
+//	.q ( index_logo )
 //	);	
 	zero_data	zero_data_inst (
 	.address ( ADDRnum ),
@@ -196,12 +207,12 @@ reg [7:0] color_index;
 initial begin
 	pixelWidth = 12;
 	move1 = 2;
-		dig1=9;
-	dig2=9;
-	dig3=9;
-	dig4=9;
-	dig5=9;
-	dig6=9;
+		dig1=8;
+	dig2=6;
+	dig3=7;
+	dig4=3;
+	dig5=5;
+	dig6=2;
 	
 	//applePosition = 40*10+25;
 	
@@ -210,12 +221,15 @@ end
 integer j;
 reg isInImage;
 integer lbaddr,numaddr;
+integer shiftit;
+integer theleftbar;
 
 integer head1position, head2position;
 integer currPosition, currPosition2;
 reg [1:0] currDirection;
 
 integer heartsTimer;
+integer countboard;
 
 wire isBoardPositionPresent, isBoardPositionPresent2;
 wire isdigone,isdigtwo,isdigthree,isdigfour,isdigfive,isdigsix,isleader;
@@ -303,6 +317,11 @@ begin
 	// TODO: uncomment the following line
 	//stage = snake_data[(1824-1600+1)*32-1 -:32];
 	//stage = 2;
+	countboard=countboard+1;
+	if (countboard==5000000) countboard=0;
+					if (countboard==100) shiftit=shiftit+1;
+					if (shiftit==480) shiftit=0;
+	
 
 	
 	// 1. get the stage
@@ -376,10 +395,26 @@ begin
 //							ADDRlb=lbaddr;
 								numaddr=addressCol % 32 +32 * (addressRow % 40);
 								ADDRnum=numaddr;
+								cc=(addressRow-19)*407;
+								rr=addressCol-114;
+								crcr=cc+rr;
+								theleftbar=((ADDR+shiftit) % 640);
+								if (crcr>61863) ADDRlogo=0;
+								else ADDRlogo=crcr;
+								if (addressCol>479) ADDRboard=ADDR;
+//								else if (theleftbar>480) ADDRboard=ADDR+shiftit+160;
+//								else if ((ADDR+shiftit)>(480*640-160)) ADDRboard=ADDR+shiftit-480*640;
+								else ADDRboard=ADDR+shiftit;
+//								ADDRsidebar=addressRow * 160+addressCol-480;
 	
 	
 	if (stage== 32'd0) begin
 		color_index = 8'd0;
+		if(addressRow>19&&addressRow<172&&addressCol>114&&addressCol<522)
+		begin
+
+		color_index=index_logo;
+		end
 	end
 	
 	
@@ -431,13 +466,14 @@ begin
 				end
 				
 				if (isInImage == 1'b0) begin
+
 					color_index = index;
 				end
 				
 				
 				
 			end
-
+//					color_index = 8'h1c;
 //			// draw boundaries of board
 //			else if (addressCol == 480) begin
 //				color_index = 8'd0;
@@ -445,23 +481,23 @@ begin
 			// area for drawing hearts timer
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
-					color_index = 8'd92;
+					color_index = 8'd85;
 				end
-				else begin
-					color_index = 8'd4;
-				end
+//				else begin
+//					color_index = 8'd4;
+//				end
 			end
 			// area for drawing invincibility timer
 			else if (addressRow > 100 && addressRow < 120 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*invincibilityTimer1 + 520*100) begin
-					color_index = 8'd0;
+					color_index = 8'd85;
 				end
-				else begin
-					color_index = index;
-				end
+//				else begin
+//
+//				end
 			end
 			else begin
-				color_index = index;
+					color_index = 8'h1c;
 			end
 		
 			
