@@ -16,6 +16,7 @@ module skeleton(resetn,
 
 	wire [995 : 0] snake_data;
 
+
 	output [31:0] debug;
 	output isCollide1;
 	assign isCollide1 = snake_data[424];
@@ -177,7 +178,7 @@ module skeleton(resetn,
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
 								 .r_data(VGA_R), .up(up), .down(down), .left(left), .right(right),
-								 .snake_data(snake_data));
+								 .snake_data(snake_data),);
 								 //.board(board), 
 								 //.snake1(snake1), .snake2(snake2), 
 								 //.head1(head1), .head2(head2),

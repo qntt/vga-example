@@ -15,7 +15,6 @@ module vga_controller(iRST_n,
 							 //stage, 
 							 //isDrawing);
 
-
 input [995 : 0] snake_data;							
 							
 input iRST_n;
@@ -230,6 +229,7 @@ reg [1:0] currDirection;
 
 integer heartsTimer;
 integer countboard;
+integer shifting;
 
 wire isBoardPositionPresent, isBoardPositionPresent2;
 wire isdigone,isdigtwo,isdigthree,isdigfour,isdigfive,isdigsix,isleader;
@@ -321,6 +321,11 @@ begin
 	if (countboard==5000000) countboard=0;
 					if (countboard==100) shiftit=shiftit+1;
 					if (shiftit==480) shiftit=0;
+					if (countboard==1000000) shifting=1;
+					if (countboard==2000000) shifting=2;
+					if (countboard==3000000) shifting=3;
+					if (countboard==4000000) shifting=4;
+					if (countboard==5000000) shifting=5;
 	
 
 	
@@ -433,7 +438,14 @@ begin
 				isInImage = 1'b0;
 				
 				if (isBoardPositionPresent == 1'b1) begin
-					color_index = index_body;
+
+				
+				if (shifting == 1) color_index = index_body;
+				if (shifting == 2) color_index = index_body+1;
+				if (shifting == 3) color_index = index_body+2;
+				if (shifting == 4) color_index = index_body+3;
+				if (shifting == 5) color_index = index_body+4;
+
 					isInImage = 1'b1;
 				end
 				
@@ -481,23 +493,29 @@ begin
 			// area for drawing hearts timer
 			else if (addressRow > 60 && addressRow < 80 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*heartsTimer + 520*100) begin
-					color_index = 8'd85;
+					color_index = 8'd0;
 				end
 //				else begin
 //					color_index = 8'd4;
 //				end
+			else begin
+					color_index = 8'd46;
+			end
 			end
 			// area for drawing invincibility timer
 			else if (addressRow > 100 && addressRow < 120 && addressCol > 520 && addressCol < 600) begin
 				if (addressCol*100 < (600-520)*invincibilityTimer1 + 520*100) begin
-					color_index = 8'd85;
+					color_index = 8'd2;
 				end
 //				else begin
 //
 //				end
+			else begin
+					color_index = 8'd46;
+			end
 			end
 			else begin
-					color_index = 8'h1c;
+					color_index = 8'd46;
 			end
 		
 			
