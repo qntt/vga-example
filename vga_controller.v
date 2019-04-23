@@ -16,7 +16,7 @@ module vga_controller(iRST_n,
 							 //isDrawing);
 
 
-input [739 : 0] snake_data;							
+input [995 : 0] snake_data;							
 							
 input iRST_n;
 input iVGA_CLK;
@@ -187,6 +187,7 @@ integer boardRow, boardCol;
  reg [7:0] digindex1,digindex2,digindex3,digindex4,digindex5,digindex6;
 
 integer applePosition;
+integer invincibilityTimer1, invincibilityTimer2, invincibilityPosition, score1, score2;
  
 reg [7:0] color_index;
 
@@ -210,16 +211,19 @@ reg isInImage;
 integer lbaddr,numaddr;
 
 integer head1position, head2position;
-integer currPosition;
-//reg [1:0] currDirection;
+
+integer currPosition, currPosition2;
+reg [1:0] currDirection;
 
 integer heartsTimer;
 
-wire isBoardPositionPresent;
+wire isBoardPositionPresent, isBoardPositionPresent2;
 
 
 // for snake 1 [110...119]
 TargetFindModule tf_module1 (.values(snake_data[629:520]), .target(boardPosition[10:0]), .isTargetPresent(isBoardPositionPresent));
+
+TargetFindModule tf_module2 (.values(snake_data[739:630]), .target(boardPosition[10:0]), .isTargetPresent(isBoardPositionPresent2));
 
 // process snake's movement
 always@(posedge iVGA_CLK)
@@ -249,6 +253,13 @@ begin
 	applePosition = snake_data[455:424];
 	
 	heartsTimer = snake_data[487:456];
+	
+	invincibilityTimer1 = snake_data[771:740];
+	invincibilityTimer2 = snake_data[803:772];
+	invincibilityPosition = snake_data[835:804];
+	
+	score1 = snake_data[867:836];
+	score2 = snake_data[899:868];
 	
 	// 3. loop through all directions to see if the current body part has a color
 	
@@ -304,10 +315,16 @@ begin
 				
 				isInImage = 1'b0;
 				
-				currPosition = head1position;
 				
-
-//				currDirection = snake_data[2*(head1)+1 -:2];
+				if (head1position == boardPosition) begin
+					color_index = 8'd1;
+					isInImage = 1'b1;
+				end
+				
+				if (head2position == boardPosition) begin
+					color_index = 8'd2;
+					isInImage = 1'b1;
+				end
 				
 				
 				if (isBoardPositionPresent == 1'b1) begin
@@ -320,15 +337,26 @@ begin
 					isInImage = 1'b1;
 				end
 				
+				
+				if (isBoardPositionPresent2 == 1'b1) begin
+					color_index = 8'd2;
+					isInImage = 1'b1;
+				end
+				
 				if (boardPosition == applePosition) begin
 					color_index = index_apple;
 					isInImage = 1'b1;
 				end
+				
+				if (boardPosition == invincibilityPosition) begin
+					color_index = 8'd0;
+					isInImage = 1'b1;
+				end
+				
 				if (isInImage == 1'b0) begin
 					color_index = index;
 				end
 				
-				// TODO: display snake 2's positions
 				
 				
 			end
@@ -344,6 +372,15 @@ begin
 				end
 				else begin
 					color_index = index;
+				end
+			end
+			// area for drawing invincibility timer
+			else if (addressRow > 100 && addressRow < 120 && addressCol > 520 && addressCol < 600) begin
+				if (addressCol*100 < (600-520)*invincibilityTimer1 + 520*100) begin
+					color_index = 8'd0;
+				end
+				else begin
+					color_index = 8'd4;
 				end
 			end
 			else begin
