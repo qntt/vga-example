@@ -112,40 +112,25 @@ module skeleton(resetn,
 		counter = 32'd0;
 		loadSeed = 1'b1;
 	end
-	
-	integer stage;
-	stage = snake_data[359:328];
+//	
+//	integer stage;
+//	stage = snake_data[359:328];
 	
 	
 	always@(*) begin
-		if (stage == 1) begin 
-			if (up==1'b0) begin
-				move1 = 1;
-			end
-			else if (right==1'b0) begin
-				move1 = 2;
-			end
-			else if (down==1'b0) begin
-				move1 = 3;
-			end
-			else if (left==1'b0) begin
-				move1 = 4;
-			end
+
+					if (up==1'b0 && move1 != 3) begin
+			move1 = 1;
 		end
-		if (stage == 2) begin
-			if (up==1'b0 && move1 != 3) begin
-				move1 = 1;
-			end
-			else if (right==1'b0 && move1 != 4) begin
-				move1 = 2;
-			end
-			else if (down==1'b0 && move1 != 1) begin
-				move1 = 3;
-			end
-			else if (left==1'b0 && move1 != 2) begin
-				move1 = 4;
-			end
-			
+		else if (right==1'b0 && move1 != 4) begin
+			move1 = 2;
+		end
+		else if (down==1'b0 && move1 != 1) begin
+			move1 = 3;
+		end
+		else if (left==1'b0 && move1 != 2) begin
+			move1 = 4;
+		end
 			if (up2==1'b0 && move2 != 3) begin
 				move2 = 1;
 			end
@@ -158,7 +143,7 @@ module skeleton(resetn,
 			else if (left2==1'b0 && move2 != 2) begin
 				move2 = 4;
 			end
-		end
+
 	end
 	
 	always@(posedge clock) begin

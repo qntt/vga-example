@@ -599,3 +599,35 @@ module mux_8_1 (out, in0, in1, in2, in3, in4, in5, in6, in7, select);
 	mux_2_1 m3 (out, w1, w2, select[2]);
 
 endmodule 
+
+module mux_8high (out, in0, in1, in2, in3, in4, in5, in6, in7, select);
+
+	input [7:0] in0, in1, in2, in3, in4, in5, in6, in7;
+	input [2:0] select;
+	
+	output [7:0] out;
+	
+	wire [7:0] w1, w2;
+	mux_4_1 m1 (w1, in0, in1, in2, in3, select[1:0]);
+	mux_4_1 m2 (w2, in4, in5, in6, in7, select[1:0]);
+	
+	mux_2_1 m3 (out, w1, w2, select[2]);
+
+endmodule 
+
+module mux_16_1 (out, in0, in1, in2, in3, in4, in5, in6, in7,
+							in8, in9, in10, in11, in12, in13, in14, in15, select);
+							
+	input [7:0] in0, in1, in2, in3, in4, in5, in6, in7;
+	input [7:0] in8, in9, in10, in11, in12, in13, in14, in15;
+	input [3:0] select;
+	
+	output [7:0] out;
+	
+	wire [7:0] w1, w2;
+	mux_8_1 m1 (w1, in0, in1, in2, in3, in4, in5, in6, in7, select[2:0]);
+	mux_8_1 m2 (w2, in8, in9, in10, in11, in12, in13, in14, in15, select[2:0]);
+	
+	mux_2_1 m3 (out, w1, w2, select[3]);						
+							
+endmodule 
