@@ -473,7 +473,7 @@ begin
 				end
 				
 				if (boardPosition == invincibilityPosition) begin
-					color_index = 8'd0;
+					color_index = index_apple+18;
 					isInImage = 1'b1;
 				end
 				
